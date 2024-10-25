@@ -1,0 +1,103 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Grid", "Elements")
+
+    = "\n"
+
+    // Grid
+    section.module
+        .container
+
+            .row.m-b-40
+                .col-md-12
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Full width
+
+            .row.m-b-40
+                .col-md-6
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Two columns
+                .col-md-6
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Two columns
+
+            .row.m-b-40
+                .col-md-4
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Three columns
+                .col-md-4
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Three columns
+                .col-md-4
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Three columns
+
+            .row.m-b-40
+                .col-md-3
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Four columns
+                .col-md-3
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Four columns
+                .col-md-3
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Four columns
+                .col-md-3
+                    .bg-gray.p-t-20.p-b-20
+                        h6.m-0.text-center Four columns
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-12&quot;&gt;...&lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-6&quot;&gt;...&lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-6&quot;&gt;...&lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-4&quot;&gt;...&lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-4&quot;&gt;...&lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-4&quot;&gt;...&lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;...&lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;...&lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;...&lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;...&lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    .col-md-12 ...
+                                    |
+                                    |.row
+                                    |    .col-md-6 ...
+                                    |    .col-md-6 ...
+                                    |
+                                    |.row
+                                    |    .col-md-4 ...
+                                    |    .col-md-4 ...
+                                    |    .col-md-4 ...
+                                    |
+                                    |.row
+                                    |    .col-md-3 ...
+                                    |    .col-md-3 ...
+                                    |    .col-md-3 ...
+                                    |    .col-md-3 ...
+    // Grid end

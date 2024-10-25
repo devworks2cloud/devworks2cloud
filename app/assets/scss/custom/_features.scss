@@ -1,0 +1,22 @@
+//
+// Features
+//
+
+.feature {
+
+    .feature-thumb {
+        transition: all 0.3s ease-in-out;
+
+        img {
+            @extend .img-shadow;
+        }
+    }
+
+    &:hover .feature-thumb {
+        transform: translateY(-5px);
+    }
+
+    .feature-content {
+        padding: 30px 0;
+    }
+}

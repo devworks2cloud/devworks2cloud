@@ -1,0 +1,17 @@
+//
+// Forms
+//
+
+.form-control {
+    border-width: $input-border-width;
+    padding: $input-padding-y $input-padding-x;
+    font-size: $btn-font-size;
+}
+
+.form-control-sm {
+    padding: $input-padding-y-sm $input-padding-x-sm;
+}
+
+.form-control-lg {
+    padding: $input-padding-y-lg $input-padding-x-lg;
+}

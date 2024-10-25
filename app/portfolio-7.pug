@@ -1,0 +1,35 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-25.jpg" data-overlay="0.6")
+        .container
+
+            .row
+                .col-md-12
+                    h2 Digital Design.
+                    p Experienced and Friendly.
+    // Hero end
+
+    = "\n"
+
+    // Portfolio
+    section.module.p-t-30.p-b-30
+        .container-fluid
+
+            .row
+                .col-md-12
+                    .owl-carousel.portfolio-carousel
+                        +PortfolioItem("assets/images/portfolio/9.jpg", "Solave Cleanser", "branding", "Digital")
+                        +PortfolioItem("assets/images/portfolio/10.jpg", "Monochrome", "digital", "Branding")
+                        +PortfolioItem("assets/images/portfolio/11.jpg", "Ellie Cashman", "packaging", "Packaging")
+                        +PortfolioItem("assets/images/portfolio/9.jpg", "Solave Cleanser", "branding", "Digital")
+                        +PortfolioItem("assets/images/portfolio/10.jpg", "Monochrome", "digital", "Branding")
+                        +PortfolioItem("assets/images/portfolio/11.jpg", "Ellie Cashman", "packaging", "Packaging")
+    // Portfolio end

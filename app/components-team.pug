@@ -1,0 +1,72 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Team", "Elements")
+
+    = "\n"
+
+    // Team
+    section.module
+        .container
+
+            .row
+                .col-md-4
+                    +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
+                .col-md-4
+                    +team("assets/images/team/2.jpg", "Richard Bauer", "Developer")
+                .col-md-4
+                    +team("assets/images/team/3.jpg", "John Pope", "Founder")
+                .col-md-4
+                    +team("assets/images/team/4.jpg", "Sara Smith", "Designer")
+                .col-md-4
+                    +team("assets/images/team/5.jpg", "Emma Connor", "Developer")
+                .col-md-4
+                    +team("assets/images/team/6.jpg", "Peter Chapman", "Founder")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;team-item&quot;&gt;
+                                    |    &lt;div class=&quot;team-image&quot;&gt;
+                                    |        &lt;img src=&quot;assets/images/team/1.jpg&quot; alt=&quot;&quot;&gt;
+                                    |        &lt;div class=&quot;team-wrap&quot;&gt;
+                                    |            &lt;div class=&quot;team-content&quot;&gt;
+                                    |                &lt;h6 class=&quot;team-name&quot;&gt;Emma Connor&lt;/h6&gt;
+                                    |                &lt;div class=&quot;team-role&quot;&gt;Designer&lt;/div&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;team-content-social&quot;&gt;
+                                    |                &lt;ul&gt;
+                                    |                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                    |                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                    |                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-snapchat-ghost&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                                    |                &lt;/ul&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    .col-md-4
+                                    |        +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
+                                    |    .col-md-4
+                                    |        +team("assets/images/team/2.jpg", "Richard Bauer", "Developer")
+                                    |    .col-md-4
+                                    |        +team("assets/images/team/3.jpg", "John Pope", "Founder")
+                                    |    .col-md-4
+                                    |        +team("assets/images/team/4.jpg", "Sara Smith", "Designer")
+                                    |    .col-md-4
+                                    |        +team("assets/images/team/5.jpg", "Emma Connor", "Developer")
+                                    |    .col-md-4
+                                    |        +team("assets/images/team/6.jpg", "Peter Chapman", "Founder")
+    // Team end

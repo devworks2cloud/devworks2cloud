@@ -1,0 +1,72 @@
+.sidebar
+
+    = "\n"
+
+    // Search widget
+    aside.widget.widget-search
+        form
+            input(type="search" class="form-control" placeholder="Type Search Words")
+            button(type="submit" class="search-button"): span.fas.fa-search
+
+    = "\n"
+
+    // Categories widget
+    aside.widget.widget-categories
+        .widget-title
+            h6 Categories
+        ul
+            li: a(href="#") Journey #[span.float-right 112]
+            li: a(href="#") Development #[span.float-right 86]
+            li: a(href="#") Sport #[span.float-right 10]
+            li: a(href="#") Photography #[span.float-right 144]
+            li: a(href="#") Symphony #[span.float-right 18]
+    = "\n"
+
+    // Recent entries widget
+    aside.widget.widget-recent-entries-custom
+        .widget-title
+            h6 Recent Posts
+        ul
+            li.clearfix
+                .wi
+                    a(href="#"): img(src="assets/images/widgets/1.jpg" alt="")
+                .wb
+                    a(href="#") Map where your photos were taken and discover local points.
+                    span.post-date May 8, 2016
+            li.clearfix
+                .wi
+                    a(href="#"): img(src="assets/images/widgets/2.jpg" alt="")
+                .wb
+                    a(href="#") Map where your photos were taken and discover local points.
+                    span.post-date May 8, 2016
+            li.clearfix
+                .wi
+                    a(href="#"): img(src="assets/images/widgets/3.jpg" alt="")
+                .wb
+                    a(href="#") Map where your photos were taken and discover local points.
+                    span.post-date May 8, 2016
+
+    = "\n"
+
+    // Twitter widget    
+
+    aside.widget.twitter-feed-widget
+
+        .widget-title
+            h6 X Feed
+        a(class="twitter-timeline" data-width="250" data-height="200" data-dnt="true" data-theme="dark" href="https://twitter.com/techtrends3107?ref_src=twsrc%5Etfw" data-tweet-limit="5") Tweets by Tech-Trends
+
+
+    = "\n"
+
+    // Tags widget
+    aside.widget.widget-tag-cloud
+        .widget-title
+            h6 Tags
+        .tag-cloud
+            a(href="#") e-commerce
+            a(href="#") portfolio
+            a(href="#") responsive
+            a(href="#") bootstrap
+            a(href="#") business
+            a(href="#") corporate

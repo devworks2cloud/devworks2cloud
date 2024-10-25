@@ -1,0 +1,55 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Checkout", "Shop")
+
+    = "\n"
+
+    // Checkout
+    section.module
+        .container
+
+            .row
+                .col-md-8.m-auto
+                    .heading-underline
+                            h5.m-b-30 Billing Details
+
+                    form
+                        .row.form-row
+                            .col-md-6.form-group
+                                input(type="text" class="form-control" placeholder="First Name")
+                            .col-md-6.form-group
+                                input(type="text" class="form-control" placeholder="Last Name")
+                        .row.form-row
+                            .col-md-12.form-group
+                                input(type="text" class="form-control" placeholder="Street Address")
+                            .col-md-12.form-group
+                                input(type="text" class="form-control" placeholder="Apartment, Suite, Unit etc.")
+                        .row.form-row
+                            .col-md-6.form-group
+                                input(type="text" class="form-control" placeholder="City")
+                            .col-md-6.form-group
+                                input(type="text" class="form-control" placeholder="State")
+
+            .row.m-t-70
+                .col-md-8.m-auto
+                    .heading-underline
+                            h5.m-b-30 Order Summary
+
+                    table.table.cart-table
+                        tbody
+                            tr
+                                td Subtotal
+                                td.text-right $21.00
+                            tr
+                                td Discount
+                                td.text-right $1.00
+                            tr
+                                td Total
+                                td.text-right $20.00
+                    .text-right
+                        a(href="#" class="btn btn-brand") Submit Order
+    // Checkout end

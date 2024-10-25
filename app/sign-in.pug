@@ -1,0 +1,31 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center.fullscreen(data-background="assets/images/module-5.jpg" data-overlay="0.6")
+        .container
+
+            .row
+                .col-lg-4.col-md-6.m-auto
+                    .m-b-20
+                        h6 Sign into your account
+                    .m-b-20
+                        form(method='post')
+                            .form-group
+                                input.form-control(type='email' placeholder='Email')
+                            .form-group
+                                input.form-control(type='password' placeholder='Pasword')
+                            .form-group
+                                button.btn.btn-block.btn-round.btn-brand(type='submit') Login
+                    .m-b-20
+                        p
+                            small
+                                | Dont have an account yet? #[a(href="/sign-up2.html") Create account]
+                                br
+                                | Forgot your username or password? #[a(href="/recover-password.html") Recover account]

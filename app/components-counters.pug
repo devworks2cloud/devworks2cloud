@@ -1,0 +1,230 @@
+extends include/templates/layout
+
+append css
+    // Aquí va tu CSS adicional
+
+append content
+    +PageHeader("Counters", "Elements")
+    script.
+        async function obtenerProximaCita() {
+            try {
+                // Realizar la solicitud a la API usando fetch en lugar de axios
+                const response = await fetch('https://api.vyte.in/v2/slots/next?duration=15&emails=praxis@tierarzt-ffm.de', {
+                    headers: {
+                        'Authorization': 'p98wfm4baupc6ns5fx8ezazv6209vuu4elvghhuflyxlv0tuff' // Clave de autorización
+                    }
+                });
+
+                // Convertir la respuesta a JSON
+                const responseData = await response.json();
+
+                // Verificar si la respuesta contiene la propiedad 'nextAvailability'
+                if (responseData && responseData.nextAvailability) {
+                    // Obtener la fecha y hora de la próxima cita disponible
+                    const startDateTime = new Date(responseData.nextAvailability.availableSlot.start.dateTime).getTime();
+                    console.log(startDateTime);
+                    // Llamar a la función para actualizar el contador regresivo
+                    actualizarContador(startDateTime);
+                } else {
+                    console.log('No hay citas disponibles.');
+                }
+            } catch (error) {
+                console.error('Error al obtener la próxima cita:', error);
+            }
+        }
+        // Función para consultar periódicamente la próxima cita y actualizar el contador si cambia
+        function consultarProximaCitaRegularmente() {
+            // Llamar a la función para obtener la próxima cita
+            obtenerProximaCita();
+            // Establecer un intervalo de tiempo para consultar cada 5 minutos (300,000 milisegundos)
+            setInterval(() => {
+                obtenerProximaCita();
+            }, 300000); // 5 minutos en milisegundos
+        }
+
+        // Llamar a la función para consultar periódicamente la próxima cita
+        consultarProximaCitaRegularmente();
+
+        // Función para calcular el tiempo restante y actualizar el contador regresivo
+        function actualizarContador(fechaFinal) {                        
+                
+                setInterval(() => {
+                    const ahora = new Date().getTime();
+                    const tiempoRestante = fechaFinal - ahora;
+                    if (tiempoRestante < 0) {
+                        tiempoRestante = 0; // Establecer el tiempo restante a cero si es negativo
+                        obtenerProximaCita(); // Llamar a la función para obtener la próxima cita si la fecha final ha pasado
+                        console.log('La fecha final ha pasado.');
+                        return; // Salir de la función actualizarContador si la fecha final ha pasado
+                    }
+                    // Calcular el tiempo restante en días, horas, minutos y segundos
+                    const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+                    const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+                    const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+
+                    // Actualizar el HTML con el tiempo restante
+                    document.getElementById("counter1").innerText = dias;
+                    document.getElementById("counter2").innerText = horas;
+                    document.getElementById("counter3").innerText = minutos;
+                    document.getElementById("counter4").innerText = segundos;
+                    document.getElementById("counter5").innerText = dias;
+                    document.getElementById("counter6").innerText = horas;
+                    document.getElementById("counter7").innerText = minutos;
+                    document.getElementById("counter8").innerText = segundos;
+                    document.getElementById("counter9").innerText = dias;
+                    document.getElementById("counter10").innerText = horas;
+                    document.getElementById("counter11").innerText = minutos;
+                    document.getElementById("counter12").innerText = segundos;
+                
+                    obtenerProximaCita();
+                }, 1000);
+        }
+    = "\n"    
+
+    // Counters
+    section.module        
+        .container
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538")
+                .col-md-3
+                    +Counter("Total downloads", "2124")
+                .col-md-3
+                    +Counter("Awards Won", "3128")
+                .col-md-3
+                    +Counter("Theme Users", "9534")
+            .row                                    
+                .col-md-3
+                    +Countdown("Days", tiempoRestante, "", true, false, false, false, "counter1")
+                .col-md-3
+                    +Countdown("Hours", tiempoRestante, "", false, true, false, false, "counter2")
+                .col-md-3
+                    +Countdown("Minutes", tiempoRestante, "", false, false, true, false, "counter3")
+                .col-md-3
+                    +Countdown("Seconds", tiempoRestante, "", false, false, false, true, "counter4")
+    // Counters end
+
+    = "\n"    
+    // Counters
+    section.module.divider-top
+            
+        .container
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538", "icon-energy icons")
+                .col-md-3
+                    +Counter("Total downloads", "2124", "icon-mustache icons")
+                .col-md-3
+                    +Counter("Awards Won", "3128", "icon-fire icons")
+                .col-md-3
+                    +Counter("Theme Users", "9534", "icon-diamond icons")
+            .row                                                    
+                .col-md-3
+                    +Countdown("Days", tiempoRestante, "ti-calendar", true, false, false, false, "counter5")
+                .col-md-3
+                    +Countdown("Hours", tiempoRestante,"ti-timer", false, true, false, false, "counter6")
+                .col-md-3
+                    +Countdown("Minutes", tiempoRestante, "ti-alarm-clock", false, false, true, false, "counter7")
+                .col-md-3
+                    +Countdown("Seconds", tiempoRestante, "ti-wand", false, false, false, true, "counter8")
+    // Counters end
+
+    = "\n"    
+    // Counters
+    section.module.parallax(data-background="assets/images/module-1.jpg" data-overlay="0.5")
+            
+        .container
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538", "icon-energy icons")
+                .col-md-3
+                    +Counter("Total downloads", "2124", "icon-mustache icons")
+                .col-md-3
+                    +Counter("Awards Won", "3128", "icon-fire icons")
+                .col-md-3
+                    +Counter("Theme Users", "9534", "icon-diamond icons")
+            .row
+                .col-md-3                   
+                    +Countdown("Days", tiempoRestante, "ti-calendar", true, false, false, false, "counter9")
+                .col-md-3
+                    +Countdown("Hours", tiempoRestante, "ti-timer", false, true, false, false, "counter10")
+                .col-md-3
+                    +Countdown("Minutes", tiempoRestante, "ti-alarm-clock", false, false, true, false, "counter11")
+                .col-md-3
+                    +Countdown("Seconds", tiempoRestante, "ti-wand", false, false, false, true, "counter12")
+    // Counters end
+
+    = "\n"    
+    // Counters    
+    section.module        
+        .container
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-energy icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;1538&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Happy Clients&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-mustache icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;2124&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Total downloads&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-fire icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;3128&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Awards Won&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-diamond icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;9534&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Theme Users&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    .col-md-3
+                                    |        +Counter("Happy Clients", "1538", "icon-energy icons")
+                                    |    .col-md-3
+                                    |        +Counter("Total downloads", "2124", "icon-mustache icons")
+                                    |    .col-md-3
+                                    |        +Counter("Awards Won", "3128", "icon-fire icons")
+                                    |    .col-md-3
+                                    |        +Counter("Theme Users", "9534", "icon-diamond icons")                                    |
+                                    |.row
+                                    |    .col-md-3
+                                    |        +Countdown("Days", tiempoRestante, "ti-calendar", true, false, false, false, "counter13)
+                                    |    .col-md-3
+                                    |        +Countdown("Hours", tiempoRestante, "ti-timer", false, true, false, false, "counter14")
+                                    |    .col-md-3
+                                    |        +Countdown("Minutes", tiempoRestante, "ti-alarm-clock", false, false, true, false, "counter15")
+                                    |    .col-md-3
+                                    |        +Countdown("Seconds", tiempoRestante, "ti-wand", false, false, false, true, "counter16")
+    // Counters end

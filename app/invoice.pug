@@ -1,0 +1,102 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Invoice", "Pages")
+
+    = "\n"
+
+    // Invoice
+    section.module
+        .container
+
+            // Invoice card
+            .row
+                .col-md-10.m-auto
+                    .card.card-lg.border
+
+                        .card-body.border-bottom
+                            .row
+                                .col-md-12
+                                    h6 Hello Peter Howard,
+                                    p This is the receipt for a payment of $250.00 (USD) you made to Boomerang.
+
+                        .card-body.border-bottom
+                            .row
+                                .col-md-6
+                                    h6.mb-0 Payment No. 123456789
+                                .col-md-6.text-md-right
+                                    h6.mb-0 Payment Date: Feb 09, 2018
+
+                        .card-body.border-bottom
+                            .row.align-items-center
+                                .col-md-8
+                                    h6.mb-0 Website design
+                                    p See how your users experience your website in realtime or view trends.
+                                .col-md-4.text-md-right
+                                    h5.text-success.mb-0 $100.00
+
+                        .card-body.border-bottom
+                            .row.align-items-center
+                                .col-md-8
+                                    h6.mb-0 Hosting (3 months)
+                                    p See how your users experience your website in realtime or view trends.
+                                .col-md-4.text-md-right
+                                    h5.text-success.mb-0 $20.00
+
+                        .card-body.border-bottom
+                            .row.align-items-center
+                                .col-md-8
+                                    h6.mb-0 Domain name (1 year)
+                                    p See how your users experience your website in realtime or view trends.
+                                .col-md-4.text-md-right
+                                    h5.text-success.mb-0 $130.00
+                        .card-body
+                            .row
+                                .col-md-3.ml-auto
+                                    .list-group
+                                        .list-group-item.border-0.px-0.pb-1.pt-1
+                                        h6
+                                            | Subtotal
+                                            span.float-right $250.00
+                                        .list-group-item.border-0.px-0.pb-1.pt-1
+                                        h6
+                                            | Discount
+                                            span.float-right -$10.00
+                                        .list-group-item.border-0.px-0.pb-1.pt-1
+                                        h6
+                                            | Total
+                                            span.float-right $240.00
+                        .card-body.bg-light
+                            .row
+                                .col-md-4
+                                    .py-3
+                                        h6 Payment from:
+                                        span 123 Less Street, <br>
+                                        span San Francisco, CA 8899 <br>
+                                        span United States <br>
+                                        a(href="#") peter@email.com
+                                .col-md-4
+                                    .py-3
+                                        h6 Payment to:
+                                        span 118 Main Street, <br>
+                                        span New York City, CA 4567 <br>
+                                        span United States <br>
+                                        a(href="#") bright@email.com
+                                .col-md-4
+                                    .py-3
+                                        h6 Extra Notes:
+                                        p See how your users experience your website in realtime or view trends to see any changes.
+            // Invoice card end
+
+            .row
+                .col-md-12
+                    .space(data-my="30px")
+
+            .row
+                .col-md-12
+                    .text-center
+                        p.lead Have more question? #[a(href="#") We can help! &rarr;]
+    // Invoice end

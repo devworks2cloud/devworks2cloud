@@ -1,0 +1,272 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.fullscreen.text-center(data-background="assets/images/module-2.jpg" data-jarallax-video="https://www.youtube.com/watch?v=ARvle-Ei6Sw" data-overlay="0.7" data-gradient="1")
+        .container
+
+            .row
+                .col-md-12
+                    h1.m-b-20: strong It All Starts with <br> Your Stunning Website
+                    p.m-b-40 See how your users experience your website in realtime or view  <br> trends to see any changes in performance over time.
+                    p
+                        a(href="#" class="btn btn-lg btn-circle btn-outline-new-white") Learn More
+    // Hero end
+
+    = "\n"
+
+    // About
+    section.module.divider-bottom
+        .container
+
+            .row
+                .col-md-6.m-auto.text-center
+                    h1 Your Site, Your Way.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    p: img(src="assets/images/main/mega-mockup.png" alt="")
+
+            .row
+                .col-md-12
+                    .space(data-mY="30px")
+
+            .row
+                .col-lg-3.col-md-6
+                    +IconBox("ti-layout", "Visual Composer", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-cup", "Revolution Slider", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-harddrives", "User Experience", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-desktop", "Fully Responsive", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+    // About end
+
+    = "\n"
+
+    // Portfolio
+    section.module.p-b-0
+        .container
+
+            .row
+                .col-md-6.m-auto.text-center
+                    h1 Digital Design.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row
+                .col-md-12
+                    ul.filters.serif
+                        li: a(href="#" data-filter="*" class="current") All
+                        li: a(href="#" data-filter=".branding") Branding
+                        li: a(href="#" data-filter=".digital") Digital
+                        li: a(href="#" data-filter=".packaging") Packaging
+
+        .container-fluid
+            .row.row-portfolio(data-columns="3")
+                .grid-sizer
+                +PortfolioItem("assets/images/portfolio/1.jpg", "Solave Cleanser", "branding", "Digital")
+                +PortfolioItem("assets/images/portfolio/4.jpg", "Monochrome", "digital", "Branding")
+                +PortfolioItem("assets/images/portfolio/3.jpg", "Ellie Cashman", "packaging", "Packaging")
+                +PortfolioItem("assets/images/portfolio/6.jpg", "White Sleeve", "branding", "Digital")
+                +PortfolioItem("assets/images/portfolio/5.jpg", "Classic Socks", "digital", "Branding")
+                +PortfolioItem("assets/images/portfolio/2.jpg", "Expirience", "packaging", "Packaging")
+    // Portfolio end
+
+    = "\n"
+
+    // Services
+    section.module
+        .container
+
+            .row
+                .col-lg-4.col-md-6
+                    +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-image", "Revolution Slider", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-archive", "User Experience", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-headphone-alt", "Great Support", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-desktop", "Fully Responsive", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                .col-lg-4.col-md-6
+                    +IconBox("ti-slice", "Trendy Design", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+    // Services end
+    = "\n"
+
+    // Alt Services
+    section.module.bg-gray
+        .container
+
+            .row.align-items-center
+
+                .col-lg-6
+                    img(src="assets/images/main/ipad.png" alt="")
+
+                .col-lg-5.offset-lg-1
+                    h2 Flexible & Lightweight.
+                    p.lead Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.
+                    .space(data-MY="50px")
+                    +iconBoxLeft("ti-layout", "Visual Composer", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+                    +iconBoxLeft("ti-cup", "Revolution Slider", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+                    +iconBoxLeft("ti-harddrives", "User Experience", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+    // Alt Services end
+
+    = "\n"
+
+    // Team
+    section.module
+        .container
+
+            .row
+                .col-md-6.m-auto.text-center
+                    h1 Creative People.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/2.jpg", "Richard Bauer", "Developer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/3.jpg", "John Pope", "Founder")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/4.jpg", "Sara Smith", "Designer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/5.jpg", "Emma Connor", "Developer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/6.jpg", "Peter Chapman", "Founder")
+
+            .row
+                .col-md-12
+                    .space(data-MY="30px")
+
+            .row
+                .col-md-12
+                    p.text-center: a(href="#" class="btn btn-circle btn-outline-brand") About Us
+    // Team end
+
+    = "\n"
+
+    // Testimonials
+    section.module.parallax(data-background="assets/images/module-12.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    .space(data-MY="50px")
+
+            .row
+                .col-md-12
+                    .review-slides.owl-carousel
+                        +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
+                        +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+                        +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+
+            .row
+                .col-md-12
+                    .space(data-MY="50px")
+    // Testimonials end
+
+    = "\n"
+
+    // Clients
+    section.module.bg-gray.p-t-0.p-b-40
+        .container
+
+            .space(data-MY="-60px")
+
+            .row
+                +pricing("Starter", "Free", false, "ti-slice")
+                +pricing("Standard", "45", true, "ti-pin-alt")
+                +pricing("Professional", "69", true, "ti-marker-alt")
+
+            .row
+                .col-md-10.m-auto
+                    .owl-carousel.clients-carousel
+                        .client
+                            img(src="assets/images/clients/1.png" alt="")
+                        .client
+                            img(src="assets/images/clients/2.png" alt="")
+                        .client
+                            img(src="assets/images/clients/3.png" alt="")
+                        .client
+                            img(src="assets/images/clients/4.png" alt="")
+                        .client
+                            img(src="assets/images/clients/5.png" alt="")
+                        .client
+                            img(src="assets/images/clients/6.png" alt="")
+                        .client
+                            img(src="assets/images/clients/7.png" alt="")
+    // Clients end
+
+    = "\n"
+
+    // Posts
+    section.module
+        .container
+
+            .row
+                .col-md-6.m-auto.text-center
+                    h1 Latest articles.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row.row-post-masonry
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/blog/1.jpg", "Bluetooth Speaker")
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/blog/3.jpg", "Minimalist Chandelier")
+                .col-md-4.post-item
+                    +PostMasonry("assets/images/blog/5.jpg", "Standard Shape")
+    // Posts end
+
+    = "\n"
+
+    // Counters
+    section.module.bg-gray.p-b-0
+        .container
+
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538", "icon-energy icons")
+                .col-md-3
+                    +Counter("Total downloads", "2124", "icon-game-controller icons")
+                .col-md-3
+                    +Counter("Awards Won", "3128", "icon-fire icons")
+                .col-md-3
+                    +Counter("Theme Users", "9534", "icon-diamond icons")
+    // Counters end
+
+    = "\n"
+
+    // Image
+    section.module.no-gutters.p-0
+        .container-fluid
+
+            .row
+                .col-md-12
+                    img(src="assets/images/module-18.jpg" alt="")
+    // Image end

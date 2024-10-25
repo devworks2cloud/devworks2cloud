@@ -1,0 +1,61 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Sliders", "Elements")
+
+    = "\n"
+
+    // Sliders
+    section.module
+        .container
+
+            .row
+                .col-md-6
+                    .image-slider.owl-carousel
+                        img(src="assets/images/portfolio/6.jpg" alt="")
+                        img(src="assets/images/portfolio/5.jpg" alt="")
+                        img(src="assets/images/portfolio/4.jpg" alt="")
+                        img(src="assets/images/portfolio/3.jpg" alt="")
+                .col-md-6
+                    .image-slider.owl-carousel(data-carousel-options='{"dots": false, "nav": false, "autoplay": true, "autoplayTimeout": 2000}')
+                        img(src="assets/images/portfolio/6.jpg" alt="")
+                        img(src="assets/images/portfolio/5.jpg" alt="")
+                        img(src="assets/images/portfolio/4.jpg" alt="")
+                        img(src="assets/images/portfolio/3.jpg" alt="")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;image-slider owl-carousel&quot;&gt;
+                                    |    &lt;img src=&quot;assets/images/portfolio/6.jpg&quot; alt=&quot;&quot;&gt;
+                                    |    &lt;img src=&quot;assets/images/portfolio/5.jpg&quot; alt=&quot;&quot;&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;image-slider owl-carousel&quot; data-carousel-options='{"dots": false, "nav": false, "autoplay": true, "autoplayTimeout": 2000}'&gt;
+                                    |    &lt;img src=&quot;assets/images/portfolio/6.jpg&quot; alt=&quot;&quot;&gt;
+                                    |    &lt;img src=&quot;assets/images/portfolio/5.jpg&quot; alt=&quot;&quot;&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.image-slider.owl-carousel
+                                    |    img(src="assets/images/portfolio/6.jpg" alt="")
+                                    |    img(src="assets/images/portfolio/5.jpg" alt="")
+                                    |    img(src="assets/images/portfolio/4.jpg" alt="")
+                                    |    img(src="assets/images/portfolio/3.jpg" alt="")
+                                    |
+                                    |.image-slider.owl-carousel(data-carousel-options='{"dots": false, "nav": false, "autoplay": true, "autoplayTimeout": 2000}')
+                                    |    img(src="assets/images/portfolio/6.jpg" alt="")
+                                    |    img(src="assets/images/portfolio/5.jpg" alt="")
+                                    |    img(src="assets/images/portfolio/4.jpg" alt="")
+                                    |    img(src="assets/images/portfolio/3.jpg" alt="")
+    // Sliders end

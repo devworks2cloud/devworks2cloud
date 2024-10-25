@@ -1,0 +1,212 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Hero", "Elements")
+
+    = "\n"
+
+    // Hero
+    section.module-cover.parallax.text-center.fullscreen(data-background="assets/images/module-2.jpg" data-overlay="0.6")
+        .container
+
+            .row
+                .col-md-12
+                    h1 Fullscreen
+    // Hero end
+
+    = "\n"
+
+    // Hero Fullscreen
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;section class=&quot;module-cover parallax text-center fullscreen&quot; data-background=&quot;assets/images/module-2.jpg&quot; data-overlay=&quot;0.6&quot;&gt;
+                                    |    &lt;div class=&quot;container&quot;&gt;
+                                    |        &lt;div class=&quot;row&quot;&gt;
+                                    |            &lt;div class=&quot;col-md-12&quot;&gt;
+                                    |                &lt;h1&gt;Fullscreen&lt;/h1&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/section&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |section.module-cover.parallax.text-center.fullscreen(data-background="assets/images/module-2.jpg" data-overlay="0.6")
+                                    |    .container
+                                    |
+                                    |        .row
+                                    |            .col-md-12
+                                    |                h1 Fullscreen
+    // Hero Fullscreen end
+
+    = "\n"
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-3.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    h1 Auto Height
+    // Hero end
+
+    = "\n"
+
+    // Hero
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-2-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-2-2"): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;section class=&quot;module-cover parallax text-center &quot; data-background=&quot;assets/images/module-3.jpg&quot; data-overlay=&quot;0.5&quot;&gt;
+                                    |    &lt;div class=&quot;container&quot;&gt;
+                                    |        &lt;div class=&quot;row&quot;&gt;
+                                    |            &lt;div class=&quot;col-md-12&quot;&gt;
+                                    |                &lt;h1&gt;Auto Height&lt;/h1&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/section&gt;
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |section.module-cover.parallax.text-center(data-background="assets/images/module-3.jpg" data-overlay="0.5")
+                                    |    .container
+                                    |
+                                    |        .row
+                                    |            .col-md-12
+                                    |                h1 Auto Height
+    // Hero end
+
+    = "\n"
+
+    // Hero Slider
+    section.module-cover-slides(data-module-cover-slides-options='{"animation": "fade"}')
+        ul.slides-container
+
+            li.parallax(data-overlay="0.5")
+                img(src="assets/images/module-1.jpg" alt="")
+                .container
+                    .row
+                        .col-md-12
+                            h1 Slide 1
+
+            li.parallax.text-center(data-overlay="0.5")
+                img(src="assets/images/module-21.jpg" alt="")
+                .container
+                    .row
+                        .col-md-12
+                           h1 Slide 2
+
+            li.parallax.text-right(data-overlay="0.7" data-gradient="1")
+                img(src="assets/images/module-25.jpg" alt="")
+                .container
+                    .row
+                        .col-md-12
+                            h1 Slide 3
+
+        .slides-navigation
+            a(href="#" class="prev"): span.ti-angle-left
+            a(href="#" class="next"): span.ti-angle-right
+    // Hero Slider end
+
+    = "\n"
+
+    // Hero Slider
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-3-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-3-2"): h6 PUG
+                    .tab-content
+                        #tab-3-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;section class=&quot;module-cover-slides&quot; data-module-cover-slides-options=&quot;{&amp;quot;animation&amp;quot;: &amp;quot;fade&amp;quot;}&quot;&gt;
+                                    |    &lt;ul class=&quot;slides-container&quot;&gt;
+                                    |        &lt;li class=&quot;parallax&quot; data-overlay=&quot;0.5&quot;&gt;
+                                    |            &lt;img src=&quot;assets/images/module-1.jpg&quot; alt=&quot;&quot;&gt;
+                                    |            &lt;div class=&quot;container&quot;&gt;
+                                    |                &lt;div class=&quot;row&quot;&gt;
+                                    |                    &lt;div class=&quot;col-md-12&quot;&gt;
+                                    |                        &lt;h1&gt;Slide 1&lt;/h1&gt;
+                                    |                    &lt;/div&gt;
+                                    |                &lt;/div&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/li&gt;
+                                    |        &lt;li class=&quot;parallax text-center&quot; data-overlay=&quot;0.5&quot;&gt;
+                                    |            &lt;img src=&quot;assets/images/module-21.jpg&quot; alt=&quot;&quot;&gt;
+                                    |            &lt;div class=&quot;container&quot;&gt;
+                                    |                &lt;div class=&quot;row&quot;&gt;
+                                    |                    &lt;div class=&quot;col-md-12&quot;&gt;
+                                    |                        &lt;h1&gt;Slide 2&lt;/h1&gt;
+                                    |                    &lt;/div&gt;
+                                    |                &lt;/div&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/li&gt;
+                                    |        &lt;li class=&quot;parallax text-right&quot; data-overlay=&quot;0.7&quot; data-gradient=&quot;1&quot;&gt;
+                                    |            &lt;img src=&quot;assets/images/module-25.jpg&quot; alt=&quot;&quot;&gt;
+                                    |            &lt;div class=&quot;container&quot;&gt;
+                                    |                &lt;div class=&quot;row&quot;&gt;
+                                    |                    &lt;div class=&quot;col-md-12&quot;&gt;
+                                    |                        &lt;h1&gt;Slide 3&lt;/h1&gt;
+                                    |                    &lt;/div&gt;
+                                    |                &lt;/div&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/li&gt;
+                                    |    &lt;/ul&gt;
+                                    |    &lt;div class=&quot;slides-navigation&quot;&gt;
+                                    |        &lt;a class=&quot;prev&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;ti-angle-left&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                                    |        &lt;a class=&quot;next&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;ti-angle-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/section&gt;
+                        #tab-3-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |section.module-cover-slides(data-module-cover-slides-options='{"animation": "fade"}')
+                                    |    ul.slides-container
+                                    |        li.parallax(data-overlay="0.5")
+                                    |            img(src="assets/images/module-1.jpg" alt="")
+                                    |            .container
+                                    |                .row
+                                    |                    .col-md-12
+                                    |                        h1 Slide 1
+                                    |        li.parallax.text-center(data-overlay="0.5")
+                                    |            img(src="assets/images/module-21.jpg" alt="")
+                                    |            .container
+                                    |                .row
+                                    |                    .col-md-12
+                                    |                    h1 Slide 2
+                                    |        li.parallax.text-right(data-overlay="0.7" data-gradient="1")
+                                    |            img(src="assets/images/module-25.jpg" alt="")
+                                    |            .container
+                                    |                .row
+                                    |                    .col-md-12
+                                    |                        h1 Slide 3
+                                    |    .slides-navigation
+                                    |        a(href="#" class="prev"): span.ti-angle-left
+                                    |        a(href="#" class="next"): span.ti-angle-right
+    // Hero Slider end

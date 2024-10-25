@@ -1,0 +1,110 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Maps", "Elements")
+
+    = "\n"
+
+    // Maps Widgets
+    section.module
+        .container
+
+            .row
+                .col-md-6
+
+                    .maps-container.map-widget.m-b-25
+                        #map.map
+                .col-md-6                    
+                    .maps-container.map-widget.m-b-25
+                        #pano.map
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;maps-container map-widget m-b-25&quot;&gt;
+                                    |    &lt;div class=&quot;map&quot; data-addresses=&quot;[48.859822, 2.352647]&quot; data-info=&quot;[Lorem ipsum dolor amet.]&quot; data-icon=&quot;assets/images/map-icon.png&quot; data-zoom=&quot;15&quot; data-street-view=&quot;1&quot;&gt;&lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;maps-container map-widget m-b-25&quot;&gt;
+                                    |    &lt;div class=&quot;map&quot; data-addresses=&quot;[48.8578708, 2.3587219]&quot; data-info=&quot;[Lorem ipsum dolor amet.]&quot; data-icon=&quot;assets/images/map-icon.png&quot; data-zoom=&quot;15&quot;&gt;&lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.maps-container.map-widget.m-b-25
+                                    |   .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-street-view="1")
+                                    |
+                                    |.maps-container.map-widget.m-b-25
+                                    |   .map(data-addresses="[48.8578708, 2.3587219]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+    // Maps Widgets end
+
+    = "\n"
+
+    // Maps
+    section.maps-container
+        #onlymap.map
+    // Maps end
+
+    = "\n"
+
+    // Maps
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-2-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-2-2'): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;section class=&quot;maps-container&quot;&gt;
+                                    |    &lt;div class=&quot;map&quot; data-addresses=&quot;[48.859822, 2.352647]&quot; data-info=&quot;[Lorem ipsum dolor sit amet.]&quot; data-icon=&quot;assets/images/map-icon.png&quot; data-zoom=&quot;15&quot;&gt;&lt;/div&gt;
+                                    |&lt;/section&gt;
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |section.maps-container
+                                    |   .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15")
+    // Maps end
+
+    // Maps
+    section.maps-container
+        #map.map
+            #street-view.map
+    // Maps end
+
+    = "\n"
+
+    // Maps
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-3-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-3-2'): h6 PUG
+                    .tab-content
+                        #tab-3-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;section class=&quot;maps-container&quot;&gt;
+                                    |    &lt;div class=&quot;map&quot; data-addresses=&quot;[48.859822, 2.352647]&quot; data-info=&quot;[Lorem ipsum dolor sit amet.]&quot; data-icon=&quot;assets/images/map-icon.png&quot; data-zoom=&quot;15&quot; data-street-view=&quot;1&quot;&gt;&lt;/div&gt;
+                                    |&lt;/section&gt;
+                        #tab-3-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |section.maps-container
+                                    |   .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor sit amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-street-view="1")
+    // Maps end

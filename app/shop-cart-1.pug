@@ -1,0 +1,65 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Shopping Cart", "Shop")
+
+    = "\n"
+
+    // Shop cart
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    form(method="post")
+                        .table-responsive
+                            table.table.cart-table
+                                thead
+                                    tr
+
+                                        th.col-thumbnail Product
+                                        th.col-title
+                                        th.col-price Price
+                                        th.col-quantity Quantity
+                                        th.col-subtotal Total
+                                        th.col-remove
+                                tbody
+                                    +CreateCartItem("assets/images/shop/1.jpg", "Classic Chair", "$30.00")
+                                    +CreateCartItem("assets/images/shop/5.jpg", "Solo Headphones", "$20.00")
+                                    +CreateCartItem("assets/images/shop/3.jpg", "Folder Calendar", "$10.00")
+
+                        .form-row
+                            .form-group.col-md-4
+                                input.form-control(type="text" placeholder="Coupon Code")
+                            .form-group.col-md-4
+                                a(href="#" class="btn btn-block-mobile btn-outline-brand") Apply Coupon
+                            .form-group.col-md-4.text-right
+                                a(href="#" class="btn btn-block-mobile btn-brand") Update Cart
+
+                        hr.m-t-0
+
+            .row.m-t-70
+                .col-md-12
+                    table.table.cart-table
+                        tbody
+                            tr
+                                td
+                                    | Subtotal
+                                td.text-right
+                                    | $21.00
+                            tr
+                                td
+                                    | Discount
+                                td.text-right
+                                    | $1.00
+                            tr
+                                td
+                                    | Total
+                                td.text-right
+                                    | $20.00
+                    .text-right
+                        a(href="#" class="btn btn-block-mobile btn-black") Proceed to checkout
+    // Shop cart end

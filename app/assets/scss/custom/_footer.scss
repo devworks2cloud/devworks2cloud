@@ -1,0 +1,55 @@
+//
+// Footer
+//
+
+.footer {
+    background: $footer-background;
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        color: $footer-headings-color;
+    }
+
+    a, .social-icons > li > a {
+        color: $footer-link-color;
+
+        &:hover,
+        &:focus {
+            color: lighten($footer-link-color, 15%);
+        }
+    }
+
+    .widget-categories ul li,
+    .widget-recent-entries ul li,
+    .widget-recent-entries-custom ul li {
+        border-color: lighten($footer-background, 5%);
+    }
+
+    .form-control {
+        background: darken($footer-background, 2%);
+        border-color: darken($footer-background, 2.5%);
+    }
+}
+
+.footer-widgets {
+    padding: $footer-padding-y 0 ($footer-padding-y - $widget-margin-y);
+
+    & + .footer-bar {
+        border-top: 1px solid lighten($footer-background, 4%);
+    }
+}
+
+.footer-bar {
+    text-align: center;
+    font-size: rem(12px);
+    padding: 22px 0;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+

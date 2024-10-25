@@ -1,0 +1,361 @@
+extends include/templates/layout
+
+block vars
+    - var template_name = "Boomerang";
+
+append css
+
+append content
+
+    +PageHeader("Documentation", "Components")
+
+    = "\n"
+
+    section.module
+        .container
+
+            .row
+                .col-lg-9
+
+                    #introduction
+                        .mb-5
+                            h5 Introduction
+                            p.lead.text-justify Thank you for purchasing our template. This documentation will help to familiarise you with how Boomerang template is structured and how to use the template features. At times, you may need further assistance if something is either not covered, or clear in the documentation. Please feel free to email here: web-master72[at]yandex.com
+
+                    #whatsincluded
+                        .mb-5
+                            hr.mb-5
+                            h5 What’s included
+                            p.lead.text-justify Within your Bootstrap theme you’ll find the following directories and files, grouping common resources and providing both compiled and minified distribution files, as well as raw source files.
+                        .mb-5
+                            pre
+                                code.language-markup.blurred
+                                    |theme/
+                                    |   ├── gulpfile.js
+                                    |   ├── package.json
+                                    |   ├── docs/
+                                    |   ├── app/
+                                    |   │   ├── assets/
+                                    |   │   │   ├── css/
+                                    |   │   │   ├── fonts/
+                                    |   │   │   ├── images/
+                                    |   │   │   ├── js/
+                                    |   │   │   ├── scss/
+                                    |   │   │   └── video/
+                                    |   │   ├── include/
+                                    |   │   │   ├── mixins/
+                                    |   │   │   └── templates/
+                                    |   │   │        └── navigation/
+                                    |   │   │        │    ├── navigation-single.pug
+                                    |   │   │        │    ├── navigation.pug
+                                    |   │   │        ├── footer.pug
+                                    |   │   │        ├── layout.pug
+                                    |   │   │        ├── off-canvas.pug
+                                    |   │   │        └── sidebar.pug
+                                    |   ├── dist/
+                                    |   │   ├── assets/
+                                    |   │   │   ├── css/
+                                    |   │   │   ├── fonts/
+                                    |   │   │   ├── images/
+                                    |   │   │   ├── js/
+                                    |   │   │   ├── scss/
+                                    |   │   │   └── video/
+
+                    #gettingstarted
+                        .mb-5
+                            hr.mb-5
+                            h5 Getting started
+                            p.lead.text-justify The template is using Gulp to automate the development and build processes. All you should do to start your project is to open the terminal in the root directory (where the package.json file is located) and enter fallowing commands.
+                        .mb-5
+                            pre
+                                code.language-markup.blurred
+                                  |npm install gulp-cli -g
+                                  |
+                                  |&lt;!-- When you&rsquo;re done, make sure you&rsquo;ve installed the rest of the theme&rsquo;s dependencies: --&gt;
+                                  |
+                                  |npm install
+                                  |
+                                  |&lt;!-- Start. Be aware that this replaces existing &quot;dist&quot; files, so proceed with caution. --&gt;
+                                  |
+                                  |gulp
+                            p *Note. You should already have #[a(href="https://nodejs.org/en/") Node] installed in your machine to build the project.
+
+                    #pugtemplateengine
+                        .mb-5
+                            hr.mb-5
+                            h5 Pug template engine
+                            p.lead.text-justify Pug is a high performance template engine heavily influenced by Haml and implemented with JavaScript for node and browsers. You can visit official site for #[a(href="https://pugjs.org") more info]. We strongly recommend you to use Pug.
+
+                    #basictemplate
+                        .mb-5
+                            hr.mb-5
+                            h5 Basic template
+                            p.lead Copy the example below into a new PUG file to get started with it.
+                        .mb-5
+                            pre
+                                code.language-pug.blurred
+                                    |extends include/templates/layout
+                                    |
+                                    |block vars
+                                    |    - var header_transparent = false;
+                                    |
+                                    |append css
+                                    |
+                                    |append content
+                                    |    h1 Hello, world!
+
+                    #pugmixins
+                        .mb-5
+                            hr.mb-5
+                            h5 Pug Mixins
+                            p.lead Here is an example how you can use Pug mixins. All available mixins you can find in file "app/include/mixins/mixins.pug"
+                        .mb-5
+                            pre
+                                code.language-pug.blurred
+                                    |extends include/templates/layout
+                                    |
+                                    |block vars
+                                    |    - var header_transparent = false;
+                                    |
+                                    |append css
+                                    |
+                                    |append content
+                                    |    .row
+                                    |        .col-lg-3.col-md-6
+                                    |            +IconBox("ti-layout", "Title Text", "Content Text", "text-center", true)
+                                    |        .col-lg-3.col-md-6
+                                    |            +IconBox("ti-cup", "Title Text", "Content Text", "text-center", true)
+                                    |        .col-lg-3.col-md-6
+                                    |            +IconBox("ti-harddrives", "Title Text", "Content Text", "text-center", true)
+                                    |        .col-lg-3.col-md-6
+                                    |            +IconBox("ti-desktop", "Title Text", "Content Text", "text-center", true)
+                        .mb-5
+                            p.lead If you want add changes for all pages just edit "include/templates/layout.pug" file:
+
+                        .mb-5
+                            pre
+                                code.language-pug.blurred
+                                    |include ../mixins/mixins
+                                    |doctype html
+                                    |html(lang="en")
+                                    |    head
+                                    |        meta(charset="UTF-8")
+                                    |        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+                                    |        meta(name="description" content="")
+                                    |        meta(name="author" content="")
+                                    |
+                                    |        title Boomerang - Template
+                                    |
+                                    |        block vars
+                                    |
+                                    |        block css
+                                    |            // Favicons
+                                    |            link(rel="shortcut icon" href="assets/images/favicon.png")
+                                    |            link(rel="apple-touch-icon" href="assets/images/apple-touch-icon.png")
+                                    |            link(rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png")
+                                    |            link(rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png")
+                                    |
+                                    |            // Web Fonts
+                                    |            link(href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet")
+                                    |            link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
+                                    |
+                                    |            // Plugins
+                                    |            link(href="assets/css/plugins.min.css" rel="stylesheet")
+                                    |
+                                    |            // Template core CSS
+                                    |            link(href="assets/css/template.css" rel="stylesheet")
+                                    |
+                                    |    body
+                                    |
+                                    |        ...
+                                    |
+                                    |        // Scripts
+                                    |        script(src="assets/js/custom/jquery-3.2.1.min.js")
+                                    |        script(src="assets/js/custom/popper.min.js")
+                                    |        script(src="assets/js/bootstrap/bootstrap.min.js")
+                                    |        script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB1UrYPeZyqIN7xXMU83m0RI4X_ag-eS34")
+                                    |        script(src="assets/js/custom/plugins.min.js")
+                                    |        script(src="assets/js/custom/custom.min.js")
+
+                    #navigation
+                        .mb-5
+                            hr.mb-5
+                            h5 Logo Settings
+                            p.lead Copy the example below into a new PUG file to get started with it.
+                        .mb-5
+                            pre
+                                code.language-markap
+                                    |&lt;!-- Brand --&gt;
+                                    |&lt;div class=&quot;inner-header&quot;&gt;
+                                    |    &lt;a class=&quot;inner-brand&quot; href=&quot;index.html&quot;&gt;
+                                    |        &lt;!-- Text or images --&gt;
+                                    |        &lt;img class=&quot;brand-dark&quot; src=&quot;assets/images/logo.png&quot; width=&quot;100px&quot; alt=&quot;&quot;&gt;
+                                    |        &lt;img class=&quot;brand-light&quot; src=&quot;assets/images/logo-light.png&quot; width=&quot;100px&quot; alt=&quot;&quot;&gt;
+                                    |    &lt;/a&gt;
+                                    |&lt;/div&gt;
+                            p Two images are used for logo, one for default logo (Logo that will display when you are on the top of page) and second for alternate logo (Logo that will display when header will be sticky).
+
+                    #icons
+                        .mb-5
+                            hr.mb-5
+                            h5 Icons
+                            p By default, #{template_name} makes use of the #[a(href="http://themify.me/themify-icons") Themify,] #[a(href="http://simplelineicons.com/") Simple Line Icons] and #[a(href="https://fontawesome.com/icons?d=listing&m=free") Font Awesome Free] icon sets.
+                            p How to use:
+                        .mb-5
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;!-- Themify --&gt;
+                                    |&lt;i class=&quot;ti-spray&quot;&gt;&lt;/i&gt;
+                                    |
+                                    |&lt;!-- Simple Line Icons --&gt;
+                                    |&lt;i class=&quot;icon-diamond icons&quot;&gt;&lt;/i&gt;
+                                    |
+                                    |&lt;!-- Font Awesome --&gt;
+                                    |&lt;i class=&quot;fab fa-accessible-icon&quot;&gt;&lt;/i&gt;
+                            ul.list-inline
+                                li.list-inline-item Result:
+                                li.list-inline-item: i.ti-spray
+                                li.list-inline-item: i.icon-diamond.icons
+                                li.list-inline-item: i.fab.fa-accessible-icon
+
+                    #googlemap
+                        .mb-5
+                            hr.mb-5
+                            h5 Google map
+                            p You need to use YOUR own Google API Key. You can get API Key #[a(href="https://developers.google.com/maps/documentation/javascript/get-api-key") here].
+
+                        .mb-5
+                            pre
+                                code.language-pug.blurred
+                                    |script(src="assets/js/custom/jquery-3.2.1.min.js")
+                                    |script(src="assets/js/custom/popper.min.js")
+                                    |script(src="assets/js/bootstrap/bootstrap.min.js")
+                                    |script(src="http://maps.googleapis.com/maps/api/js?key=YOURAPIKEYHERE")
+                                    |script(src="assets/js/custom/plugins.min.js")
+                                    |script(src="assets/js/custom/custom.min.js")
+
+                    #twitter
+                        .mb-5
+                            hr.mb-5
+                            h5 Twitter
+                            p.lead.text-justify The Twitter feed element uses a HTML5 data attribute called 'data-twitter' to determine which feed to display. You can enter your ID. How to do it:
+                        .mb-5
+                            p
+                                ol
+                                    li - Go to www.twitter.com and sign in as normal, go to your settings page.
+                                    li - Go to "Widgets" on the left hand side.
+                                    li - Create a new widget for what you need eg "user time line" or "search" etc.
+                                    li - Feel free to check "exclude replies" if you don't want replies in results.
+                                    li - Now go back to settings page, and then go back to widgets page and
+                                    li - you should see the widget you just created. Click edit.
+                                    li - Look at the URL in your web browser, you will see a long number like this: 345735908357048478
+                                    li - Use this as your ID below instead!
+                        .mb-5
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;!-- Twitter widget--&gt;
+                                    |&lt;aside class=&quot;widget twitter-feed-widget&quot;&gt;
+                                    |    &lt;div class=&quot;widget-title&quot;&gt;
+                                    |        &lt;h6&gt;Twitter Feed&lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;twitter-feed&quot; data-twitter=&quot;345170787868762112&quot; data-number=&quot;1&quot;&gt;&lt;/div&gt;
+                                    |&lt;/aside&gt;
+
+                    #contactforms
+                        .mb-5
+                            hr.mb-5
+                            h5 Contact Forms
+                            p.lead Open «assets/php/contact.php» and make the following changes:
+
+                        .mb-5
+                            pre
+                                code
+                                    |// Mail settings
+                                    |$to = "yourmail@here.com";
+                                    |
+                                    |// You can put here your email
+                                    |$header = "From: noreply@neomax.com\r\n";
+                        .mb-5
+                            p If contact form not working:
+                        .mb-5
+                            pre
+                                code
+                                    |&lt;?php
+                                    |    mail('you@yourmail.com','Test mail','The mail function is working!');
+                                    |    echo 'Mail sent!';
+                                    |?&gt;
+                        .mb-5
+                            ul
+                                li 1. Save this code as mailtest.php
+                                li 2. change you@yourmail.com to your e-mail address
+                                li 3. upload mailtest.php to your server
+                                li 4. open mailtest.php in your browser (http://yourwebsite.com/mailtest.php)
+                                li 5. check your inbox to see if a test message arrived.
+                            p If it works:
+                            ul
+                                li 1. double-check your form script for errors (like e-mail address misspelling)
+                                li 2. use the same e-mail address as your form recipient
+                                li 3. double-check your SPAM filters and SPAM/Junk/Bulk mailboxes
+                            p If it not:
+                            p Contact your host and ask them to check PHP mail() setting.
+
+                    #scss
+                        .mb-5
+                            hr.mb-5
+                            h5 SCSS Changes
+                            p.lead Create new files for your variables and any other scss changes and add it to the "assets/scss/template.scss" file.
+                        .mb-5
+                            pre
+                                code.language-css
+                                    |@import "bootstrap/functions.scss";
+                                    |@import "bootstrap/variables.scss";
+                                    |@import "custom/functions.scss";
+                                    |@import "variables.scss";
+                                    |@import "your-variables.scss";
+                                    |@import "custom/bootstrap.scss";
+                                    |@import "components.scss";
+                                    |@import "your-scss-changes.scss";
+                            p Now you can add or overwrite Bootstrap and our variables.
+
+                    #css
+                        .mb-5
+                            hr.mb-5
+                            h5 CSS Changes
+                            p.lead If you not use SCSS: Create a new CSS file and add the following #[code &lt;link&gt;] to the HTML after the #[code &lt;head&gt;] section:
+                        .mb-5
+                            pre
+                                code.language-markup.blurred
+                                    |...
+                                    |&lt;!-- Template core CSS--&gt;
+                                    |&lt;link href=&quot;assets/css/template.css&quot; rel=&quot;stylesheet&quot;&gt;
+                                    |&lt;link href=&quot;assets/css/your-css.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+                    #smooth_scrolling
+                        .mb-5
+                            hr.mb-5
+                            h5 Smooth scroll
+                            p.lead You can add "Smooth scroll" effect to any link or button with "href" attribute. For example:
+                        .mb-5
+                            pre
+                                code.language-markup.blurred
+                                    |...
+                                    |&lt;a class=&quot;smoothscroll btn btn-lg btn-circle btn-brand&quot; href=&quot;#IDtoScroll&quot;&gt;Get Started&lt;/a&gt;
+                                    |...
+
+
+                .col-lg-3
+                    ul.nav-sidebar.sticky-sidebar
+                        li: a(href="#introduction" class="smoothscroll") Introduction
+                        li: a(href="#whatsincluded" class="smoothscroll") What’s included
+                        li: a(href="#gettingstarted" class="smoothscroll") Getting started
+                        li: a(href="#pugtemplateengine" class="smoothscroll") Pug template engine
+                        li: a(href="#basictemplate" class="smoothscroll") Basic template
+                        li: a(href="#pugmixins" class="smoothscroll") Pug Mixins
+                        li: a(href="#navigation" class="smoothscroll") Logo Settings
+                        li: a(href="#icons" class="smoothscroll") Icons
+                        li: a(href="#googlemap" class="smoothscroll") Google map
+                        li: a(href="#twitter" class="smoothscroll") Twitter
+                        li: a(href="#contactforms" class="smoothscroll") Contact Forms
+                        li: a(href="#scss" class="smoothscroll") SCSS changes
+                        li: a(href="#css" class="smoothscroll") CSS changes
+                        li: a(href="#smooth_scrolling" class="smoothscroll") Smooth scroll

@@ -1,0 +1,22 @@
+//
+// Clients
+//
+
+.client {
+    text-align: center;
+    padding: 20px;
+    opacity: .6;
+    transition: all 0.3s ease-in-out;
+
+    img {
+        margin: auto;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.clients-carousel .owl-item img {
+    width: auto;
+}

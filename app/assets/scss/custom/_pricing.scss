@@ -1,0 +1,87 @@
+//
+// Pricing
+//
+
+.pricing-wrapper {
+    position: relative;
+    background: $pricing-background;
+    border: 1px solid $pricing-border-color;
+    text-align: center;
+    padding: 0 50px;
+    margin: 0 0 30px;
+    transition: 0.3s ease-in-out;
+
+    & + & {
+        border-left-color: transparent;
+    }
+
+    &:last-child {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
+
+    &:first-child {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    &:hover {
+        border-color: $pricing-border-color;
+        border-radius: $border-radius;
+        box-shadow: 0 4px 16px rgba(90, 90, 90, .05);
+        transform: scale(1.02);
+        z-index: 1;
+    }
+}
+
+.pricing-header {
+    position: relative;
+    border-bottom: 1px solid $pricing-border-color;
+    padding: 30px 0;
+}
+
+.pricing-title {
+    text-transform: uppercase;
+    letter-spacing: rem(1px);
+    font-size: rem(11px);
+    margin: 0;
+}
+
+.pricing-icon {
+    line-height: 1;
+    font-size: rem(40px);
+    color: $headings-color;
+    margin: 0px 0 20px;
+}
+
+.pricing-price {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: rem(64px);
+
+    > span {
+        position: absolute;
+        display: block;
+        left: -15px;
+        top: 28px;
+        font-size: rem(18px);
+    }
+}
+
+.pricing-body > *:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-footer {
+    padding: 34px 0 45px;
+}
+
+.pricing-wrapper .pricing-title,
+.pricing-wrapper .pricing-price {
+    color: $headings-color;
+}
+
+.pricing-wrapper .pricing-body {
+    color: $body-color;
+}
+

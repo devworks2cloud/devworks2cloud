@@ -1,0 +1,34 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center.fullscreen(data-background="assets/images/module-5.jpg" data-overlay="0.6")
+        .container
+
+            .row
+                .col-lg-4.col-md-6.m-auto
+                    .m-b-20
+                        h6 Create a new account
+                    .m-b-20
+                        form(method='post')
+                            .form-group
+                                input.form-control(type='text' placeholder='Name')
+                            .form-group
+                                input.form-control(type='email' placeholder='E-mail')
+                            .form-group
+                                input.form-control(type='password' placeholder='Pasword')
+                            .form-group
+                                input.form-control(type='password' placeholder='Confirm password')
+                            .form-group
+                                button.btn.btn-block.btn-round.btn-brand(type='submit') Sign Up
+                    .m-b-20
+                        p
+                            small
+                                | By signing up, you agree to the
+                                a(href='/terms-of-service.html')  terms of service

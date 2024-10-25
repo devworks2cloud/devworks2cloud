@@ -1,0 +1,92 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Contact Us", "Pages")
+
+    = "\n"
+
+    // Contact Us
+    section.module
+        .container
+
+            .row
+                .col-md-6
+                    h5 Central office
+                    p Map where your photos were taken and where your photos were taken and discover discover local points of interest.
+                    hr
+                    .maps-container.map-widget.m-b-25
+                        #onlymap.map
+                .col-md-6
+                    h5 Local office
+                    p Map where your photos were taken and where your photos were taken and discover discover local points of interest.
+                    hr
+                    .maps-container.map-widget.m-b-25                        
+                        #street-view.map
+                    
+    //- = "\n"
+    
+    // Services
+    section.module
+        .container
+
+            .row
+                .col-lg-3.col-md-6
+                    +IconBox("ti-email", "Drop us a line", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-wallet", "Commercial", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-headphone-alt", "Support", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-map-alt", "Visit our office", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+    // Services end
+
+    = "\n"
+
+    // Form
+    section.module.divider-top
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Let's talk.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    form#contact-form(action="/contact" method="post" novalidate)
+                        .row
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" name="name" placeholder="Name" required="")
+                                    p.help-block.text-danger
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                                    p.help-block.text-danger
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                                    p.help-block.text-danger
+                            .col-md-12
+                                .form-group
+                                    textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                            .col-md-12
+                                p
+                                .text-center
+                                    input(type="submit" class="btn btn-circle btn-brand" value="Send Message")
+                    // Ajax response
+                    #contact-response.ajax-response.text-center
+                    // Contact response
+                    #responseMessage.text-center
+                    
+        // Form end
+
+    = "\n"
+    

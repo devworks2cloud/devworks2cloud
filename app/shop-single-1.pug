@@ -1,0 +1,257 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Classic Chair", "Shop")
+
+    = "\n"
+
+    // Product
+    section.module
+        .container
+
+            .row
+                .col-lg-7
+                    .shop-single-item-photos
+                        a(href="assets/images/shop/5.jpg" class="shop-single-item-popup")
+                            img(src="assets/images/shop/5.jpg" alt="")
+
+                        ul.shop-single-item-gallery
+                            li: a(href="assets/images/shop/1.jpg" class="shop-single-item-popup")
+                                    img(src="assets/images/shop/1.jpg" alt="")
+                            li: a(href="assets/images/shop/2.jpg" class="shop-single-item-popup")
+                                    img(src="assets/images/shop/2.jpg" alt="")
+                            li: a(href="assets/images/shop/3.jpg" class="shop-single-item-popup")
+                                    img(src="assets/images/shop/3.jpg" alt="")
+
+                .col-lg-5
+                    .shop-single-item
+                        h2.shop-single-item-title Classic Chair
+
+                        .shop-single-item-rating
+                            span.star-rating
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.fas.fa-star
+                                i.far.fa-star
+                            a(href="#") (2 customer reviews)
+
+                        h2.shop-single-item-price $100.00
+
+                        .shop-single-item-description
+                            p Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern personalized look.
+
+                        .form-row
+                            .form-group.col-md-6
+                                input.form-control(type="number" value="1")
+                            .form-group.col-md-6
+                                select.form-control
+                                    option(selected="selected") Choose Size
+                                    option EU 35
+                                    option(disabled) EU 36
+                                    option EU 35
+
+                        .form-row
+                            .form-group.col-md-6
+                                a(href="#" class="btn btn-block btn-dark") Add to cart
+
+                        hr.m-t-30.m-b-30
+
+                        .info-list
+                            li
+                                span.info-list-title SKU:
+                                span 213496
+                            li
+                                span.info-list-title Category:
+                                span #[a(href="#") Interior]
+                            li
+                                span.info-list-title Tags:
+                                span #[a(href="#") Chair], #[a(href="#") Interior]
+
+                        hr.m-t-30.m-b-30
+
+                        .info-list
+                            li
+                                span.info-list-title Share:
+                                span
+                                    ul.social-icons
+                                        li: a(href="#") #[i.ti-twitter]
+                                        li: a(href="#") #[i.ti-instagram]
+                                        li: a(href="#") #[i.ti-pinterest]
+    // Product end
+
+    = "\n"
+
+    // Tabs
+    section.module.no-gutter.p-0
+        .container-fluid
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs.justify-content-center
+                        li.nav-item
+                            a.nav-link.active(data-toggle="tab" href="#shop-description"): h6 Description
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#shop-info"): h6 Additional information
+                        li.nav-item
+                            a.nav-link(data-toggle="tab" href="#shop-comment"): h6 Reviews (2)
+
+        .container
+            .row
+                .col-md-12
+
+                    .shop-tab-content.tab-content
+
+                        #shop-description.tab-pane.fade.show.active
+                            p Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko.
+                            p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+
+                        #shop-info.tab-pane.fade
+                            table.table
+                                tbody
+                                    tr
+                                        th Title
+                                        th Info
+                                    tr
+                                        td Compositions
+                                        td Jeans
+                                    tr
+                                        td Size
+                                        td 44, 46, 48
+                                    tr
+                                        td Color
+                                        td Black
+                                    tr
+                                        td Brand
+                                        td Somebrand
+
+                        #shop-comment.tab-pane.fade
+                            // Comments area
+                            .comments-area-shop
+                                .comment-list-shop
+
+                                    // Comment
+                                    .comment-shop
+                                        .comment-author-shop
+                                            img.avatar(src="assets/images/avatar/1.jpg" alt="")
+                                        .comment-body-shop
+                                            .comment-meta-shop
+                                                .comment-meta-author-shop
+                                                    a(href="#") Jason Ford
+                                                .comment-meta-date-shop
+                                                    a(href="#") May 5, 2015 at 4:51 am
+                                            .comment-content-shop
+                                                p Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko.
+                                                p: span.star-rating.star-rating-4
+                                            .comment-reply-shop
+                                                a(href="#") Reply
+                                        // Subcomment
+                                        .children
+                                            .comment-shop
+                                                .comment-author-shop
+                                                    img.avatar(src="assets/images/avatar/2.jpg" alt="")
+                                                .comment-body-shop
+                                                    .comment-meta-shop
+                                                        .comment-meta-author-shop
+                                                            a(href="#") Manager
+                                                        .comment-meta-date-shop
+                                                            a(href="#") May 5, 2015 at 4:51 am
+                                                    .comment-content-shop
+                                                        p Sound Good!
+                                        // Subcomment
+                                        .children
+                                            .comment-shop
+                                                .comment-author-shop
+                                                    img.avatar(src="assets/images/avatar/4.jpg" alt="")
+                                                .comment-body-shop
+                                                    .comment-meta-shop
+                                                        .comment-meta-author-shop
+                                                            a(href="#") Manager
+                                                        .comment-meta-date-shop
+                                                            a(href="#") May 5, 2015 at 4:51 am
+                                                    .comment-content-shop
+                                                        p Thank you!
+
+                                    // Comment
+                                    .comment-shop
+                                        .comment-author-shop
+                                            img.avatar(src="assets/images/avatar/3.jpg" alt="")
+                                        .comment-body-shop
+                                            .comment-meta-shop
+                                                .comment-meta-author-shop
+                                                    a(href="#") Henry Cain
+                                                .comment-meta-date-shop
+                                                    a(href="#") May 5, 2015 at 4:51 am
+                                            .comment-content-shop
+                                                p Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. Selfies iPhone Kickstarter, drinking vinegar jean shorts fixie consequat flexitarian four loko.
+                                                p: span.star-rating.star-rating-4
+                                            .comment-reply-shop
+                                                a(href="#") Reply
+                                        // Subcomment
+                                        .children
+                                            .comment-shop
+                                                .comment-author-shop
+                                                    img.avatar(src="assets/images/avatar/2.jpg" alt="")
+                                                .comment-body-shop
+                                                    .comment-meta-shop
+                                                        .comment-meta-author-shop
+                                                            a(href="#") Manager
+                                                        .comment-meta-date-shop
+                                                            a(href="#") May 5, 2015 at 4:51 am
+                                                    .comment-content-shop
+                                                        p Thank you!
+
+
+                                .comment-respond
+                                    h5.comment-reply-title Add Review
+                                    p.comment-notes Your email address will not be published. Required fields are marked
+                                    form.comment-form.row
+                                        .form-group.col-md-4
+                                            input(type="text" class="form-control" placeholder="Name")
+                                        .form-group.col-md-4
+                                            input(type="text" class="form-control" placeholder="Email")
+                                        .form-group.col-md-4
+                                            select.form-control
+                                                option(selected="selected") Your Rating
+                                                option 1
+                                                option 2
+                                                option 3
+                                                option 4
+                                                option 5
+                                        .form-group.col-md-12
+                                            textarea(class="form-control" rows="8" placeholder="Comment")
+                                        .form-submit.col-md-12
+                                            button(type="submit" class="btn btn-dark") Post Comment
+                            // Comments area end
+    // Tabs end
+
+    = "\n"
+
+    // Related Products
+    section.module.divider-top
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h5 You may also like:
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row
+                .col-md-12
+                    .owl-carousel.shop-carousel
+                        +ShopGridItem("assets/images/shop/1.jpg", "Classic Chair", "$20.00")
+                        +ShopGridItem("assets/images/shop/2.jpg", "Thermo Flask", "$30.00")
+                        +ShopGridItem("assets/images/shop/3.jpg", "Folder Calendar", "$50.00")
+                        +ShopGridItem("assets/images/shop/4.jpg", "Amber Body Lotion", "$80.00")
+                        +ShopGridItem("assets/images/shop/5.jpg", "Solo Headphones", "$100.00")
+                        +ShopGridItem("assets/images/shop/6.jpg", "Ceramic Watch", "$20.00")
+                        +ShopGridItem("assets/images/shop/7.jpg", "Wooden Bathroom Set", "$40.00")
+                        +ShopGridItem("assets/images/shop/8.jpg", "Wedge Slippers", "$26.00")
+                        +ShopGridItem("assets/images/shop/9.jpg", "Plain Glass Bottle", "$40.00")
+    // Related Products end

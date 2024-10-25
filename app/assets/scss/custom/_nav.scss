@@ -1,0 +1,42 @@
+//
+// Tabs
+//
+
+.nav-tabs {
+
+    .nav-link {
+        border-color: transparent;
+        border-width: 0 0 $nav-tabs-link-active-border-width 0;
+        font-weight: 500;
+        color: $headings-color;
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+        border-color: $nav-tabs-link-active-border-color;
+        border-bottom-width: $nav-tabs-link-active-border-width;
+    }
+}
+
+.nav-tabs-icons {
+
+    .nav-link > span {
+        display: block;
+        color: $link-color;
+        font-size: rem(42px);
+        margin: 0 0 20px;
+    }
+}
+
+//
+// Tabbable tabs
+//
+
+.tab-content {
+    padding: $tabs-padding-y $tabs-padding-x;
+
+    > .tab-pane > *:last-child {
+        margin-bottom: 0;
+    }
+}
+

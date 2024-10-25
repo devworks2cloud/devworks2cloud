@@ -1,0 +1,76 @@
+//
+// Base
+//
+
+body {
+    overflow-x: hidden;
+}
+
+iframe {
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    &.img-shadow {
+        border-radius: $border-radius;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+    }
+}
+
+.no-gutters {
+
+    > .container,
+    > .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+
+        > .row {
+            margin-right: 0;
+            margin-left: 0;
+
+            > .col,
+            > [class*="col-"] {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    display: block;
+    bottom: $srcoll-top-position;
+    right: $srcoll-top-position;
+    z-index: 999;
+    background: rgba(color("white"), 0.9);
+    height: $srcoll-top-size;
+    width: $srcoll-top-size;
+    line-height: $srcoll-top-size - rem(2px);
+    text-align: center;
+    font-size: $srcoll-top-font-size;
+    border-radius: $srcoll-top-border-radius;
+    box-shadow: 0 0 0px 5px rgba(0, 0, 0, .05);
+    transition: .5s all ease;
+    transform: translateY($srcoll-top-position + $srcoll-top-size + rem(5px));
+    color: $body-color;
+
+    &.scroll-top-visible {
+        transform: translateY(0);
+    }
+
+    &:hover {
+        transform: translateY(rem(-5px));
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    .scroll-top {
+        display: none;
+    }
+
+}

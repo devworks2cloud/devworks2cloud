@@ -1,0 +1,110 @@
+//
+// Comments - Rewiews
+//
+
+.comment-list + .comment-respond,
+.comment-list-shop + .comment-respond {
+    margin-top: 50px;
+}
+
+.comment,
+.comment-shop {
+    border-bottom: 1px solid $border-color;
+    padding: 30px 0 0;
+
+    .children > & {
+        border: 0;
+        border-top: 1px solid $border-color;
+        margin-left: 85px;
+    }
+
+    .comment-list > &:last-child,
+    .comment-list-shop > &:last-child {
+        border: 0;
+    }
+}
+
+.comment-author,
+.comment-author-shop {
+    margin: 5px 0 0;
+    height: 64px;
+    width: 64px;
+    float: left;
+
+    > img {
+        border-radius: $avatar-border-radius;
+    }
+}
+
+.comment-body,
+.comment-body-shop {
+    position: relative;
+    padding: 0 0 10px;
+    margin: 0 0 0 85px;
+}
+
+.comment-meta,
+.comment-meta-shop {
+    margin: 0 0 15px;
+}
+
+.comment-meta-author a,
+.comment-meta-author-shop a {
+    font-weight: 500;
+    color: $headings-color;
+
+    &:hover,
+    &:focus {
+        color: $link-color;
+    }
+}
+
+.comment-meta-date,
+.comment-meta-date-shop {
+    font-size: 90%;
+
+    a {
+        color: $body-color;
+        opacity: .6;
+
+        &:hover,
+        &:focus {
+            color: $link-color;
+            opacity: 1;
+        }
+    }
+}
+
+.comment-reply,
+.comment-reply-shop {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: rem(9px);
+
+    > a {
+        background: #f4f4f4;
+        border-radius: $reply-link-border-radius;
+        padding: 5px 15px;
+        display: block;
+        color: $headings-color;
+
+        &:hover,
+        &:focus {
+            background: $link-color;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .comment,
+    .comment-shop {
+
+        .children > & {
+            margin-left: 0;
+        }
+    }
+
+}

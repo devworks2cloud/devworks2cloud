@@ -1,0 +1,161 @@
+//
+// Shop
+//
+
+.shop-grid-item {
+    margin-bottom: 40px;
+}
+
+.shop-item-thumb,
+.shop-carousel .shop-grid-item {
+    margin-bottom: 20px;
+}
+
+.shop-item-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-item-thumb img {
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-item-hidden {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-item-hidden > .btn {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 4px 16px rgba(90, 90, 90, .05);
+}
+
+.shop-item-thumb:hover img {
+    opacity: 0.5;
+}
+
+.shop-item-thumb:hover .shop-item-hidden {
+    transform: translateY(-100%);
+}
+
+.shop-item-captions {
+    text-align: center;
+}
+
+.shop-item-title {
+    margin: 0 0 5px;
+}
+
+.shop-item-price {
+    opacity: 0.5;
+}
+
+//
+// Shop Single
+//
+
+.shop-single-item-photos {
+    padding-left: 100px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.shop-single-item-gallery {
+    position: absolute;
+    width: 90px;
+    left: 0;
+    top: 0;
+}
+
+.shop-single-item-gallery > li {
+    margin-bottom: 10px;
+}
+
+.shop-single-item-title {
+    margin: 0;
+}
+
+.shop-single-item-price {
+    font-size: rem(32px);
+    margin-bottom: 20px;
+}
+
+.shop-single-item-description {
+    margin-bottom: 30px;
+}
+
+.shop-single-item-rating {
+    font-size: rem(13px);
+    margin: 0 0 20px;
+
+    .star-rating {
+        margin-right: 10px;
+    }
+
+    a {
+        color: $headings-color;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
+}
+
+//
+// Shop Cart
+//
+
+.cart-table {
+    border: 1px solid $border-color;
+}
+
+.cart-table th {
+    font-weight: 400;
+}
+
+.cart-table p {
+    margin: 0;
+}
+
+.cart-thumbnail {
+    max-width: 80px;
+}
+
+.cart-table > thead > tr > th,
+.cart-table > tbody > tr > th,
+.cart-table > tfoot > tr > th,
+.cart-table > thead > tr > td,
+.cart-table > tbody > tr > td,
+.cart-table > tfoot > tr > td {
+    border: 0;
+    border-top: 1px solid $border-color;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.cart-table .cart-remove {
+    text-align: center;
+}
+
+@include media-breakpoint-down(md) {
+
+    .shop-single-item-photos {
+        padding-left: 0;
+    }
+
+    .shop-single-item-gallery {
+        position: static;
+        width: auto;
+
+        > li {
+            display: inline-block;
+            width: 90px;
+            margin: 10px 10px 0 0;
+        }
+    }
+
+}

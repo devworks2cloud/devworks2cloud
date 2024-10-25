@@ -1,0 +1,47 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = false;
+
+append css
+
+append content
+
+    // Hero Section (Optional)
+    section.module-cover.parallax.text-center(data-background="assets/images/module-5.jpg" data-overlay="0.6")
+        .container
+            .row
+                .col-lg-8.col-md-10.m-auto
+                    h1 Terms of Service
+                    p.lead Please read the following terms and conditions carefully.
+
+    // Main Content Section
+    section.py-5
+        .container
+            .row
+                .col-lg-10.col-md-12.m-auto
+                    h3 1. Introduction
+                    p
+                        | Welcome to our website. By accessing or using this site, you agree to the terms and conditions outlined here. 
+
+                    h3 2. User Responsibilities
+                    p
+                        | You must comply with the rules and guidelines listed on the website, and refrain from any prohibited activities, such as ...
+
+                    h3 3. Privacy Policy
+                    p
+                        | We are committed to protecting your privacy. Please review our Privacy Policy for detailed information about how we manage user data.
+
+                    h3 4. Limitation of Liability
+                    p
+                        | Our website is provided "as is" without any warranties. We are not liable for any damages...
+
+                    // More sections as needed
+                    h3 5. Changes to Terms
+                    p
+                        | We reserve the right to modify these terms at any time. The most current version will always be available on this page.
+                        
+                    h3 6. Contact Us
+                    p
+                        | If you have any questions about these Terms of Service, please contact us at #[a(href="mailto:support@yourdomain.com") support@yourdomain.com].
+

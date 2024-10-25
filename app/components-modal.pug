@@ -1,0 +1,201 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Modal", "Elements")
+
+    = "\n"
+
+    // Modal
+    section.module
+        .container
+
+            .row.align-items-center
+                .col-lg-6
+                    p.m-b-30: img(src="assets/images/main/about-4.jpg" alt="")
+                .col-lg-5.offset-lg-1
+                    h2 Easy and Simple.
+                    p.lead.m-b-30 Map where your photos were taken and discover local points of interest. Map where your photos.
+                    button(class="btn btn-circle btn-outline-brand m-b-30" type="button" data-toggle="modal" data-target="#modal-1") Open modal
+
+            // Modal
+            #modal-1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                .modal-dialog(role="document")
+                    .modal-content
+                        .modal-header
+                            h5.modal-title Modal title
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                span(aria-hidden="true") ×
+                        .modal-body
+                            | ...
+                        .modal-footer
+                            button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                            button.btn.btn-primary(type="button") Save changes
+
+    // Modal
+    section.module.divider-top
+        .container
+
+            .row.align-items-center
+                .col-lg-5
+                    h2 Easy and Simple.
+                    p.lead.m-b-30 Map where your photos were taken and discover local points of interest. Map where your photos.
+                    button(class="btn btn-circle btn-outline-brand m-b-30" type="button" data-toggle="modal" data-target="#modal-2") Large modal
+                .col-lg-6.offset-lg-1
+                    p.m-b-30: img(src="assets/images/main/about-4.jpg" alt="")
+
+            // Modal
+            #modal-2.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                .modal-dialog.modal-lg(role="document")
+                    .modal-content
+                        .modal-header
+                            h5.modal-title Modal title
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                span(aria-hidden="true") ×
+                        .modal-body
+                            | ...
+
+    // Modal
+    section.module.module.divider-top
+        .container
+
+            .row.align-items-center
+                .col-lg-6
+                    p.m-b-30: img(src="assets/images/main/about-4.jpg" alt="")
+                .col-lg-5.offset-lg-1
+                    h2 Easy and Simple.
+                    p.lead.m-b-30 Map where your photos were taken and discover local points of interest. Map where your photos.
+                    button(class="btn btn-circle btn-outline-brand m-b-30" type="button" data-toggle="modal" data-target="#modal-3") Small modal
+
+            // Modal
+            #modal-3.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                .modal-dialog.modal-sm(role="document")
+                    .modal-content
+                        .modal-header
+                            h5.modal-title Modal title
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                span(aria-hidden="true") ×
+                        .modal-body
+                            | ...
+
+    // Modal
+    section.module.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;button class=&quot;btn btn-circle btn-outline-brand&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-1&quot;&gt;Open modal&lt;/button&gt;
+                                    |&lt;button class=&quot;btn btn-circle btn-outline-brand&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-2&quot;&gt;Large modal&lt;/button&gt;
+                                    |&lt;button class=&quot;btn btn-circle btn-outline-brand&quot; type=&quot;button&quot; data-toggle=&quot;modal&quot; data-target=&quot;#modal-3&quot;&gt;Small modal&lt;/button&gt;
+                                    |
+                                    |&lt;!-- Modal --&gt;
+                                    |&lt;div class=&quot;modal fade&quot; id=&quot;modal-1&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+                                    |    &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;
+                                    |        &lt;div class=&quot;modal-content&quot;&gt;
+                                    |            &lt;div class=&quot;modal-header&quot;&gt;
+                                    |                &lt;h5 class=&quot;modal-title&quot;&gt;Modal title&lt;/h5&gt;
+                                    |                &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&times;&lt;/span&gt;&lt;/button&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;modal-body&quot;&gt;
+                                    |               ...
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;modal-footer&quot;&gt;
+                                    |                &lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                                    |                &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;!-- Modal Large --&gt;
+                                    |&lt;div class=&quot;modal fade&quot; id=&quot;modal-2&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+                                    |    &lt;div class=&quot;modal-dialog modal-lg&quot; role=&quot;document&quot;&gt;
+                                    |        &lt;div class=&quot;modal-content&quot;&gt;
+                                    |            &lt;div class=&quot;modal-header&quot;&gt;
+                                    |                &lt;h5 class=&quot;modal-title&quot;&gt;Modal title&lt;/h5&gt;
+                                    |                &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&times;&lt;/span&gt;&lt;/button&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;modal-body&quot;&gt;
+                                    |               ...
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;modal-footer&quot;&gt;
+                                    |                &lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                                    |                &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;!-- Modal Small --&gt;
+                                    |&lt;div class=&quot;modal fade&quot; id=&quot;modal-3&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;exampleModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+                                    |    &lt;div class=&quot;modal-dialog modal-sm&quot; role=&quot;document&quot;&gt;
+                                    |        &lt;div class=&quot;modal-content&quot;&gt;
+                                    |            &lt;div class=&quot;modal-header&quot;&gt;
+                                    |                &lt;h5 class=&quot;modal-title&quot;&gt;Modal title&lt;/h5&gt;
+                                    |                &lt;button class=&quot;close&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&times;&lt;/span&gt;&lt;/button&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;modal-body&quot;&gt;
+                                    |               ...
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;modal-footer&quot;&gt;
+                                    |                &lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+                                    |                &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Save changes&lt;/button&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |button(class="btn btn-circle btn-outline-brand" type="button" data-toggle="modal" data-target="#modal-1") Open modal
+                                    |button(class="btn btn-circle btn-outline-brand" type="button" data-toggle="modal" data-target="#modal-2") Open modal
+                                    |button(class="btn btn-circle btn-outline-brand" type="button" data-toggle="modal" data-target="#modal-3") Open modal
+                                    |
+                                    |// Modal
+                                    |#modal-1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                                    |    .modal-dialog(role="document")
+                                    |        .modal-content
+                                    |            .modal-header
+                                    |                h5.modal-title Modal title
+                                    |                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    |                    span(aria-hidden="true") ×
+                                    |            .modal-body ...
+                                    |            .modal-footer
+                                    |                button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                                    |                button.btn.btn-primary(type="button") Save changes
+                                    |
+                                    |// Modal Large
+                                    |#modal-1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                                    |    .modal-dialog.modal-lg(role="document")
+                                    |        .modal-content
+                                    |            .modal-header
+                                    |                h5.modal-title Modal title
+                                    |                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    |                    span(aria-hidden="true") ×
+                                    |            .modal-body ...
+                                    |            .modal-footer
+                                    |                button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                                    |                button.btn.btn-primary(type="button") Save changes
+                                    |
+                                    |// Modal Small
+                                    |#modal-1.modal.fade(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                                    |    .modal-dialog.modal-sm(role="document")
+                                    |        .modal-content
+                                    |            .modal-header
+                                    |                h5.modal-title Modal title
+                                    |                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    |                    span(aria-hidden="true") ×
+                                    |            .modal-body ...
+                                    |            .modal-footer
+                                    |                button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+                                    |                button.btn.btn-primary(type="button") Save changes
+    // Modal end

@@ -1,0 +1,83 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-6.jpg" data-jarallax-video="https://www.youtube.com/watch?v=9A4m0xzGOqM" data-overlay="0.65" data-gradient="1")
+        .container
+
+            .row
+                .col-md-12
+                    h1 We have been helping<br> build brands
+                    p Experienced and Friendly.
+    // Hero end
+
+    = "\n"
+
+    // Services
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Why work with us?
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    img(src="assets/images/main/notebook.png" alt="")
+
+            .row
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-layout-media-left", "Mega Menus", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-desktop", "Fully Responsive", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-face-smile", "Friendly Support", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-marker-alt", "Trendy Design", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-star", "User Experience", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-layout-sidebar-right", "Sidebars", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-headphone-alt", "Great Support", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-layout-slider", "Lightbox", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+                .col-lg-4.col-md-6
+                    +iconBoxLeft("ti-stats-up", "Animations", "See how your users experience your website in realtime or view trends to see any changes in performance.")
+    // Services end
+
+    = "\n"
+
+    // Features
+    section.module.divider-top
+
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h3 Ready to Start your Project?
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-4
+                    +Feature("assets/images/features/1.jpg", "Web Design", "See how your users experience your website in realtime or view trends to see any changes in performance over time.")
+                .col-md-4
+                    +Feature("assets/images/features/2.jpg", "Plugin Development", "See how your users experience your website in realtime or view trends to see any changes in performance over time.")
+                .col-md-4
+                    +Feature("assets/images/features/3.jpg", "Theme Development", "See how your users experience your website in realtime or view trends to see any changes in performance over time.")
+    // Feature end

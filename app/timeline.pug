@@ -1,0 +1,108 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-11.jpg" data-overlay="0.35")
+        .container
+
+            .row
+                .col-md-12
+                    h2 Timeline
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+    // Hero end
+
+    = "\n"
+
+    // Timeline
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Digital Design.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    ul.timeline
+                        li
+                            .timeline-badge
+                            .timeline-panel
+                                .timeline-preview
+                                    img(src="assets/images/blog/1.jpg" alt="")
+                                .timeline-body
+                                    h6 Front-End Framework
+                                    p Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.
+                                    p: a(href="#") Read more
+                        li
+                            .timeline-badge
+                            .timeline-panel
+                                .timeline-preview
+                                    img(src="assets/images/blog/3.jpg" alt="")
+                                .timeline-body
+                                    h6 Web Development
+                                    p Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.
+                                    p: a(href="#") Read more
+                        li
+                            .timeline-badge
+                            .timeline-panel
+                                .timeline-preview
+                                    img(src="assets/images/blog/5.jpg" alt="")
+                                .timeline-body
+                                    h6 Theme Development
+                                    p Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.
+                                    p: a(href="#") Read more
+                        li
+                            .timeline-badge
+                            .timeline-panel
+                                .timeline-preview
+                                    img(src="assets/images/blog/7.jpg" alt="")
+                                .timeline-body
+                                    h6 Plugin Development
+                                    p Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.
+                                    p: a(href="#") Read more
+                        .timeline-top
+                        .timeline-bottom
+    // Timeline end
+
+    = "\n"
+
+    // Callout
+    section.module.bg-gray.p-b-0
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Ready to Start your Project?
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="20px")
+
+            .row
+                .col-md-12
+                    p.text-center
+                        a(href="#" class="btn btn-circle btn-brand") Purchase Template
+    // Callout end
+
+    = "\n"
+
+    // Image
+    section.module.no-gutters.p-0
+        .container-fluid
+
+            .row
+                .col-md-12
+                    img(src="assets/images/module-18.jpg" alt="")
+    // Image end

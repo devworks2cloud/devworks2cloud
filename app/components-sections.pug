@@ -1,0 +1,139 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Sections", "Elements")
+
+    = "\n"
+
+    // Section
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Simple Section.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // Section end
+
+    = "\n"
+
+    // Section
+    section.module.bg-gray
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Simple Section.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // Section end
+
+    = "\n"
+
+    // Section
+    section.module.parallax(data-background="assets/images/module-1.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Parallax Section.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // Section end
+
+    = "\n"
+
+    // Section
+    section.module.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="https://vimeo.com/144698619" data-overlay="0.5")
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Vimeo Section.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // Section end
+
+    = "\n"
+
+    // Section
+    section.module.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="https://www.youtube.com/watch?v=ARvle-Ei6Sw" data-overlay="0.85" data-gradient="1")
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Youtube and Gradient.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // Section end
+
+    = "\n"
+
+    // Section
+    section.module.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="mp4:assets/video/video.mp4,webm:assets/video/video.webm,ogv:assets/video/video.ogv" data-overlay="0.3")
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h2 Local Video.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // Section end
+
+    = "\n"
+
+    // Section
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;section class=&quot;module&quot;&gt;
+                                    |    ...
+                                    |&lt;/section&gt;
+                                    |
+                                    |&lt;section class=&quot;module bg-gray&quot;&gt;
+                                    |    ...
+                                    |&lt;/section&gt;
+                                    |
+                                    |&lt;section class=&quot;module parallax&quot; data-background=&quot;assets/images/module-1.jpg&quot; data-overlay=&quot;0.5&quot;&gt;
+                                    |    ...
+                                    |&lt;/section&gt;
+                                    |
+                                    |&lt;section class=&quot;module parallax&quot; data-background=&quot;assets/images/module-1.jpg&quot; data-jarallax-video=&quot;https://vimeo.com/144698619&quot; data-overlay=&quot;0.5&quot;&gt;
+                                    |    ...
+                                    |&lt;/section&gt;
+                                    |
+                                    |&lt;section class=&quot;module parallax&quot; data-background=&quot;assets/images/module-1.jpg&quot; data-jarallax-video=&quot;https://www.youtube.com/watch?v=ARvle-Ei6Sw&quot; data-overlay=&quot;0.85&quot; data-gradient=&quot;1&quot;&gt;
+                                    |    ...
+                                    |&lt;/section&gt;
+                                    |
+                                    |&lt;section class=&quot;module parallax&quot; data-background=&quot;assets/images/module-1.jpg&quot; data-jarallax-video=&quot;mp4:assets/video/video.mp4,webm:assets/video/video.webm,ogv:assets/video/video.ogv&quot; data-overlay=&quot;0.3&quot;&gt;
+                                    |    ...
+                                    |&lt;/section&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |section.module
+                                    |   ...
+                                    |
+                                    |section.module.bg-gray
+                                    |   ...
+                                    |
+                                    |section.module.parallax(data-background="assets/images/module-1.jpg" data-overlay="0.5")
+                                    |   ...
+                                    |
+                                    |section.module.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="https://vimeo.com/144698619" data-overlay="0.5")
+                                    |   ...
+                                    |
+                                    |section.module.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="https://www.youtube.com/watch?v=ARvle-Ei6Sw" data-overlay="0.85" data-gradient="1")
+                                    |   ...
+                                    |
+                                    |section.module.parallax(data-background="assets/images/module-1.jpg" data-jarallax-video="mp4:assets/video/video.mp4,webm:assets/video/video.webm,ogv:assets/video/video.ogv" data-overlay="0.3")
+                                    |   ...
+    // Section end

@@ -1,0 +1,30 @@
+//
+// Number Box
+//
+
+.number-box {
+    padding: 20px 0;
+
+    .number-box-header {
+        display: table;
+        margin: 0 0 5px;
+    }
+
+    .number-box-title,
+    .number-box-number {
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    .number-box-title {
+        padding-left: 8px;
+    }
+
+    .number-box-number {
+        font-size: rem(30px);
+    }
+
+    .number-box-content > *:last-child {
+        margin-bottom: 0;
+    }
+}

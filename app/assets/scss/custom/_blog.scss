@@ -1,0 +1,162 @@
+//
+// Blog
+//
+
+.sidebar {
+    padding-left: 15px;
+}
+
+.post {
+    border-bottom: 1px solid $border-color;
+    padding: 0 0 35px;
+    margin: 0 0 45px;
+
+    .row-post-masonry & {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    .row-post-thumbnail & {
+        border: 0;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    &:last-of-type {
+        border: 0;
+    }
+}
+
+.post-preview {
+    border-radius: $border-radius;
+    transition: all 0.3s ease-in-out;
+    margin: 0 0 35px;
+
+    img {
+        border-radius: $border-radius;
+    }
+
+    .row-post-thumbnail & {
+        margin: 0;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 16px rgba(90, 90, 90, .05);
+        transform: translateY(-5px);
+    }
+}
+
+.post-wrapper {
+
+    .row-post-masonry & {
+        padding: 0 5px;
+    }
+}
+
+.post-header {
+    margin: 0 0 30px;
+
+    .post-title {
+        font-weight: 500;
+        font-size: rem(25px);
+        margin-bottom: 8px;
+
+        .row-post-masonry & {
+            font-size: rem(16px);
+            margin-bottom: 14px;
+        }
+
+        .row-post-thumbnail & {
+            font-size: rem(18px);
+            margin-bottom: 6px;
+        }
+    }
+
+    .row-post-masonry & {
+        margin: 0 0 10px;
+    }
+
+    .row-post-thumbnail & {
+        margin: 0 0 16px;
+    }
+}
+
+.post-meta {
+    list-style: none;
+    font-size: rem(13px);
+    color: $text-muted;
+    padding: 0;
+    margin: 0;
+
+    > li {
+        position: relative;
+        display: inline-block;
+        padding: 0 14px 0 0;
+        margin: 0 14px 0 0;
+
+        > a {
+            color: $text-muted;
+
+            &:hover {
+                color: $headings-color;
+            }
+        }
+
+        &:not(:last-child):after {
+            position: absolute;
+            content: '/';
+            right: -5px;
+            top: 0;
+        }
+    }
+}
+
+.post-content {
+
+    blockquote {
+        border-left: 2px solid #eaeaea;
+        padding: 10px 0 10px 40px;
+        margin: 40px 0;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border-color: theme-color("brand");
+        }
+    }
+
+    ul, ol {
+        margin-left: 40px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+}
+
+//
+// Media
+//
+
+@include media-breakpoint-down(md) {
+
+    .sidebar {
+        padding-left: 0;
+        margin-top: 80px;
+    }
+
+}
+
+@include media-breakpoint-down(sm) {
+
+    .row-post-thumbnail .post-wrapper {
+        padding: 35px 0 0;
+    }
+
+}
+
+
+

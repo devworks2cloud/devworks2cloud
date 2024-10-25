@@ -1,0 +1,81 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-9.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    h1 FAQs
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+    // Hero end
+
+    = "\n"
+
+    // FAQs
+    section.module
+        .container
+
+            .row
+                .col-lg-9
+                    #accordion1.accordion
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-1") Where is my order?
+                            #collapse-1.collapse.show(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi.
+                                    p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-2") Where do you ship?
+                            #collapse-2.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-3") How do i return an item?
+                            #collapse-3.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-4") Where is my order?
+                            #collapse-4.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5") Where do you ship?
+                            #collapse-5.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-6") How do i return an item?
+                            #collapse-6.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes in performance over time. See how your users experience your website in realtime or view trends to see any changes
+
+                .col-lg-3
+                    .sidebar
+                        // Search widget
+                        aside.widget.widget-search
+                            form
+                                input(type="search" class="form-control" placeholder="Type Search Words")
+                                button(type="submit" class="search-button"): span.fas.fa-search
+
+                        // Text widget
+                        aside.widget.widget-text
+                            .textwidget
+                                h6 Need Help!
+                                p See how your users experience your website in realtime or view trends.
+                                p: a(href="#") Contact Us
+    // FAQs end

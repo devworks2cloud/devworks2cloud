@@ -1,0 +1,189 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Buttons", "Elements")
+
+    = "\n"
+
+    // Buttons
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    h5.m-b-30 Rounded Buttons
+            .row
+                .col-md-12
+                    .demo-btn
+                        a(class="btn btn-brand" href="#") Buttons
+                        a(class="btn btn-primary" href="#") Buttons
+                        a(class="btn btn-secondary" href="#") Buttons
+                        a(class="btn btn-success" href="#") Buttons
+                        a(class="btn btn-danger" href="#") Buttons
+                        a(class="btn btn btn-warning" href="#") Buttons
+                        a(class="btn btn-info" href="#") Buttons
+                        a(class="btn btn-light" href="#") Buttons
+                        a(class="btn btn-dark" href="#") Buttons
+                        a(class="btn btn-outline-brand" href="#") Buttons
+                        a(class="btn btn-outline-primary" href="#") Buttons
+                        a(class="btn btn-outline-secondary" href="#") Buttons
+                        a(class="btn btn-outline-success" href="#") Buttons
+                        a(class="btn btn-outline-danger" href="#") Buttons
+                        a(class="btn btn-outline-warning" href="#") Buttons
+                        a(class="btn btn-outline-info" href="#") Buttons
+                        a(class="btn btn-outline-dark" href="#") Buttons
+                        a(class="btn btn-outline-light" href="#") Buttons
+
+            .row.m-t-40
+                .col-md-12
+                    h5.m-b-30 Full Rounded Buttons
+            .row
+                .col-md-12
+                    .demo-btn
+                        a(class="btn btn-circle btn-brand" href="#") Buttons
+                        a(class="btn btn-circle btn-primary" href="#") Buttons
+                        a(class="btn btn-circle btn-secondary" href="#") Buttons
+                        a(class="btn btn-circle btn-success" href="#") Buttons
+                        a(class="btn btn-circle btn-danger" href="#") Buttons
+                        a(class="btn btn-circle btn btn-warning" href="#") Buttons
+                        a(class="btn btn-circle btn-info" href="#") Buttons
+                        a(class="btn btn-circle btn-light" href="#") Buttons
+                        a(class="btn btn-circle btn-dark" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-brand" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-primary" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-secondary" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-success" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-danger" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-warning" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-info" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-dark" href="#") Buttons
+                        a(class="btn btn-circle btn-outline-light" href="#") Buttons
+
+            .row.m-t-40
+                .col-md-12
+                    h5.m-b-30 Buttons with icons
+            .row
+                .col-md-12
+                    .demo-btn
+                        a(class="btn btn-circle btn-brand" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-primary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-secondary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-success" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-danger" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn btn-warning" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-info" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-light" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-dark" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-brand" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-primary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-secondary" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-success" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-danger" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-warning" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-info" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-dark" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+                        a(class="btn btn-circle btn-outline-light" href="#") #[span.btn-icon-left.far.fa-gem] Buttons
+
+            .row.m-t-40
+                .col-md-12
+                    h5.m-b-30 Button Sizes
+
+                    .demo-btn
+                        a(class="btn btn-brand btn-lg" href="#") Large button
+                        a(class="btn btn-brand" href="#") Default Button
+                        a(class="btn btn-brand btn-sm" href="#") Small button
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;!-- Colors--&gt;
+                                    |&lt;a class=&quot;btn btn-brand&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-primary&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-secondary&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-success&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-danger&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn btn-warning&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-info&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-light&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-dark&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |
+                                    |&lt;!-- Outline Buttons--&gt;
+                                    |&lt;a class=&quot;btn btn-outline-brand&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-primary&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-secondary&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-success&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-danger&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-warning&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-info&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-dark&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-outline-light&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |
+                                    |&lt;!-- Circle Buttons--&gt;
+                                    |&lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Buttons&lt;/a&gt;
+                                    |
+                                    |&lt;!-- Button with icon--&gt;
+                                    |&lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;btn-icon-left far fa-gem&quot;&gt;&lt;/span&gt;Buttons&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Buttons&lt;span class=&quot;btn-icon-right far fa-gem&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                                    |
+                                    |&lt;!-- Button Sizes--&gt;
+                                    |&lt;a class=&quot;btn btn-brand btn-lg&quot; href=&quot;#&quot;&gt;Large button&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-brand&quot; href=&quot;#&quot;&gt;Default Button&lt;/a&gt;
+                                    |&lt;a class=&quot;btn btn-brand btn-sm&quot; href=&quot;#&quot;&gt;Small button&lt;/a&gt;
+
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |// Colors
+                                    |a(class="btn btn-brand" href="#") Buttons
+                                    |a(class="btn btn-primary" href="#") Buttons
+                                    |a(class="btn btn-secondary" href="#") Buttons
+                                    |a(class="btn btn-success" href="#") Buttons
+                                    |a(class="btn btn-danger" href="#") Buttons
+                                    |a(class="btn btn btn-warning" href="#") Buttons
+                                    |a(class="btn btn-info" href="#") Buttons
+                                    |a(class="btn btn-light" href="#") Buttons
+                                    |a(class="btn btn-dark" href="#") Buttons
+                                    |
+                                    |// Outline Buttons
+                                    |a(class="btn btn-outline-brand" href="#") Buttons
+                                    |a(class="btn btn-outline-primary" href="#") Buttons
+                                    |a(class="btn btn-outline-secondary" href="#") Buttons
+                                    |a(class="btn btn-outline-success" href="#") Buttons
+                                    |a(class="btn btn-outline-danger" href="#") Buttons
+                                    |a(class="btn btn-outline-warning" href="#") Buttons
+                                    |a(class="btn btn-outline-info" href="#") Buttons
+                                    |a(class="btn btn-outline-dark" href="#") Buttons
+                                    |a(class="btn btn-outline-light" href="#") Buttons
+                                    |
+                                    |// Circle Buttons
+                                    |a(class="btn btn-circle btn-brand" href="#") Buttons
+                                    |
+                                    |// Button with icon
+                                    |a(class="btn btn-circle btn-brand" href="#")
+                                    |    span.btn-icon-left.far.fa-gem
+                                    |    |Buttons
+                                    |a(class="btn btn-circle btn-brand" href="#")
+                                    |    |Buttons
+                                    |    span.btn-icon-right.far.fa-gem
+                                    |
+                                    |// Button Sizes
+                                    |a(class="btn btn-brand btn-lg" href="#") Large button
+                                    |a(class="btn btn-brand" href="#") Default Button
+                                    |a(class="btn btn-brand btn-sm" href="#") Small button
+    // Buttons end
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+//
+// Iconbox
+//
+
+.icon-box {
+    padding: 20px 0;
+
+    .icon-box-icon {
+        font-size: rem(38px);
+        margin: 0 0 10px;
+        color: theme-color("brand");
+        transition: all 0.3s ease-in-out;
+    }
+
+    .icon-box-title h6 {
+        margin: 0 0 12px;
+    }
+
+    .icon-box-content > *:last-child {
+        margin-bottom: 0;
+    }
+
+    .icon-box-link {
+        margin: 10px 0 0;
+    }
+
+    &:hover {
+        .icon-box-icon {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.icon-box-left {
+    position: relative;
+    padding-left: 60px;
+    text-align: left;
+
+    .icon-box-icon {
+        position: absolute;
+        height: 38px;
+        width: 38px;
+        left: 0;
+        text-align: center !important;
+        line-height: rem(38px);
+        font-size: rem(35px);
+    }
+}
+
+
+
+
+
+

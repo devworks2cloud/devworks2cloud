@@ -1,0 +1,121 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Accordion", "Elements")
+
+    = "\n"
+
+    // Accordion
+    section.module
+        .container
+
+            .row
+                .col-md-6
+                    #accordion1.accordion
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-1") What are my payment options?
+                            #collapse-1.collapse.show(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-2") What are my payment options?
+                            #collapse-2.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-3") What are my payment options?
+                            #collapse-3.collapse(data-parent="#accordion1")
+                                .accordion-item-body
+                                    p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                .col-md-6
+                    #accordion2.accordion.accordion-brand
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-4") What are my payment options?
+                            #collapse-4.collapse.show(data-parent="#accordion2")
+                                .accordion-item-body
+                                    p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-5") What are my payment options?
+                            #collapse-5.collapse(data-parent="#accordion2")
+                                .accordion-item-body
+                                    p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                        .accordion-item
+                            .accordion-item-header
+                                h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-6") What are my payment options?
+                            #collapse-6.collapse(data-parent="#accordion2")
+                                .accordion-item-body
+                                    p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;accordion&quot; id=&quot;accordion1&quot;&gt;
+                                    |    &lt;div class=&quot;accordion-item&quot;&gt;
+                                    |        &lt;div class=&quot;accordion-item-header&quot;&gt;
+                                    |           &lt;h6&gt;&lt;a  class=&quot;accordion-link&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapse-1&quot; class=&quot;&quot; aria-expanded=&quot;true&quot;&gt;What are my payment options?&lt;/a&gt;&lt;/h6&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;collapse show&quot; id=&quot;collapse-1&quot; data-parent=&quot;#accordion1&quot;
+                                    |           &lt;div class=&quot;accordion-item-body&quot;&gt;
+                                    |               &lt;p&gt;...&lt;/p&gt;
+                                    |           &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;accordion-item&quot;&gt;
+                                    |        &lt;div class=&quot;accordion-item-header&quot;&gt;
+                                    |           &lt;h6&gt;&lt;a class=&quot;accordion-link collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapse-2&quot; aria-expanded=&quot;false&quot;&gt;What are my payment options?&lt;/a&gt;&lt;/h6&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;collapse&quot; id=&quot;collapse-2&quot; data-parent=&quot;#accordion1&quot;
+                                    |           &lt;div class=&quot;accordion-item-body&quot;&gt;
+                                    |               &lt;p&gt;...&lt;/p&gt;
+                                    |           &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;!-- Backgrounds: --&gt;
+                                    |
+                                    |&lt;div class=&quot;accordion accordion-brand&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-dark&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-secondary&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-success&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-info&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-warning&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-danger&quot;&gt;...&lt;/div&gt;
+                                    |&lt;div class=&quot;accordion accordion-light&quot;&gt;...&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |#accordion1.accordion
+                                    |    .accordion-item
+                                    |        .accordion-item-header
+                                    |            h6: a(class="accordion-link" data-toggle="collapse" href="#collapse-1") What are my payment options?
+                                    |        #collapse-1.collapse.show(data-parent="#accordion1")
+                                    |            .accordion-item-body
+                                    |                p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon |officia aute, non
+                                    |    .accordion-item
+                                    |        .accordion-item-header
+                                    |            h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-2") What are my payment options?
+                                    |        #collapse-2.collapse(data-parent="#accordion1")
+                                    |            .accordion-item-body
+                                    |                p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon |officia aute, non
+                                    |    .accordion-item
+                                    |        .accordion-item-header
+                                    |            h6: a(class="accordion-link collapsed" data-toggle="collapse" href="#collapse-3") What are my payment options?
+                                    |        #collapse-3.collapse(data-parent="#accordion1")
+                                    |            .accordion-item-body
+                                    |                p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon |officia aute, non
+    // Accordion end

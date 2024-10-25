@@ -1,0 +1,24 @@
+//
+// Progress Bars
+//
+
+.progress-item {
+    margin-bottom: 20px;
+
+    & + & {
+        margin-top: 24px;
+    }
+}
+
+.progress-title {
+    padding-left: 4px;
+
+    > h6 {
+        font-size: rem(13.5px);
+        margin-bottom: 8px;
+    }
+}
+
+.progress {
+    padding: 4px;
+}

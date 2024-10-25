@@ -1,0 +1,210 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Testimonials", "Elements")
+
+    = "\n"
+
+    // Testimonials
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    .owl-carousel.review-carousel(data-carousel-options='{"autoplayTimeout": 5000}')
+                        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+                        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/3.jpg")
+                        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/4.jpg")
+                        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;owl-carousel review-carousel&quot;&gt;
+                                    |    ...
+                                    |    &lt;div class=&quot;review-card&quot;&gt;
+                                    |        &lt;div class=&quot;review-card-content&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos were taken and discover local points of interest. Map where your photos.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;review-card-author&quot;&gt;
+                                    |            &lt;div class=&quot;review-card-author-photo&quot;&gt;
+                                    |                &lt;img src=&quot;assets/images/avatar/1.jpg&quot; alt=&quot;&quot;&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;review-card-author-info&quot;&gt;
+                                    |                &lt;h6 class=&quot;review-card-author-title&quot;&gt;Emma Connor&lt;/h6&gt;
+                                    |                &lt;span class=&quot;star-rating star-rating-4&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    ...
+                                    |&lt;/div&gt;
+
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.owl-carousel.review-carousel
+                                    |    +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                                    |    +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+                                    |    +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/3.jpg")
+                                    |    +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/4.jpg")
+                                    |    +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                                    |    +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+    // Testimonials end
+
+    = "\n"
+
+    // Testimonials
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-4
+                    +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                .col-md-4
+                    +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+                .col-md-4
+                    +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/3.jpg")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-2-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-2-2'): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |   ...
+                                    |   &lt;div class=&quot;col-md-4&quot;&gt;
+                                    |       &lt;div class=&quot;review-card&quot;&gt;
+                                    |           &lt;div class=&quot;review-card-content&quot;&gt;
+                                    |               &lt;p&gt;Map where your photos were taken and discover local points of interest. Map where your photos.&lt;/p&gt;
+                                    |           &lt;/div&gt;
+                                    |           &lt;div class=&quot;review-card-author&quot;&gt;
+                                    |               &lt;div class=&quot;review-card-author-photo&quot;&gt;
+                                    |                   &lt;img src=&quot;assets/images/avatar/1.jpg&quot; alt=&quot;&quot;&gt;
+                                    |               &lt;/div&gt;
+                                    |               &lt;div class=&quot;review-card-author-info&quot;&gt;
+                                    |                   &lt;h6 class=&quot;review-card-author-title&quot;&gt;Emma Connor&lt;/h6&gt;
+                                    |                   &lt;span class=&quot;star-rating star-rating-4&quot;&gt;&lt;/span&gt;
+                                    |               &lt;/div&gt;
+                                    |           &lt;/div&gt;
+                                    |       &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |   ...
+                                    |&lt;/div&gt;
+
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    .col-md-4
+                                    |        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                                    |    .col-md-4
+                                    |        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+                                    |    .col-md-4
+                                    |        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/3.jpg")
+    // Testimonials end
+
+    = "\n"
+
+    // Testimonials
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    .review-slides.owl-carousel
+                        +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
+                        +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+                        +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-3-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-3-2'): h6 PUG
+                    .tab-content
+                        #tab-3-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;review-slides owl-carousel&quot;&gt;
+                                    |    ...
+                                    |    &lt;div class=&quot;review&quot;&gt;
+                                    |        &lt;div class=&quot;review-icons&quot;&gt;
+                                    |            &lt;img src=&quot;assets/images/avatar/1.jpg&quot; alt=&quot;&quot;&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;review-content&quot;&gt;
+                                    |            &lt;blockquote&gt;
+                                    |                &lt;p&gt;I don't work from drawings. I don't make sketches and drawings &lt;br/&gt; and color sketches into a final painting.&lt;/p&gt;
+                                    |                &lt;footer class=&quot;blockquote-footer&quot;&gt;Albert Einstein&lt;/footer&gt;
+                                    |            &lt;/blockquote&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    ...
+                                    |&lt;/div&gt;
+                        #tab-3-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.review-slides.owl-carousel
+                                    |    +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings and color sketches into a final painting.")
+                                    |    +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
+                                    |    +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
+    // Testimonials end
+
+    = "\n"
+
+    // Testimonials
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    .review-slides.owl-carousel
+                        +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.", true)
+                        +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.", true)
+                        +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.", true)
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-4-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-4-2'): h6 PUG
+                    .tab-content
+                        #tab-4-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;review-slides owl-carousel&quot;&gt;
+                                    |    ...
+                                    |    &lt;div class=&quot;review&quot;&gt;
+                                    |        &lt;div class=&quot;review-icons&quot;&gt;
+                                    |            &lt;h2 class=&quot;ti-comment-alt&quot;&gt;&lt;/h2&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;review-content&quot;&gt;
+                                    |            &lt;blockquote&gt;
+                                    |                &lt;p&gt;I don't work from drawings. I don't make sketches and drawings &lt;br/&gt; and color sketches into a final painting.&lt;/p&gt;
+                                    |                &lt;footer class=&quot;blockquote-footer&quot;&gt;Albert Einstein&lt;/footer&gt;
+                                    |            &lt;/blockquote&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    ...
+                                    |&lt;/div&gt;
+                        #tab-4-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.review-slides.owl-carousel
+                                    |    +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings and color sketches into a final painting.", true)
+                                    |    +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.", true)
+                                    |    +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.", true)
+    // Testimonials end

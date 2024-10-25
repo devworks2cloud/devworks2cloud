@@ -1,0 +1,60 @@
+//
+// Accordion
+//
+
+.accordion {
+    margin-bottom: $paragraph-margin-bottom;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-item-header {
+    background-color: color("wild-sand");
+    padding: 20px;
+}
+
+.accordion-item-header h6 {
+    margin: 0;
+}
+
+.accordion-item-header h6 a {
+    position: relative;
+    display: block;
+    color: $headings-color;
+
+    &::after {
+        position: absolute;
+        font-family: Font Awesome\ 5 Free;
+        line-height: $line-height-base;
+        font-weight: 900;
+        font-size: rem(10px);
+        content: "\f068";
+        right: 0;
+        top: 0;
+    }
+
+    &.collapsed::after {
+        content: "\f067";
+    }
+}
+
+.accordion-item-body {
+    padding: 20px 20px 0;
+}
+
+.accordion-item-body > *:last-child {
+    margin-bottom: 0;
+}
+
+//
+// Alternate accordions
+//
+
+@each $color, $value in $theme-colors {
+    .accordion-#{$color} {
+        @include accordion-variant($value);
+    }
+}
+

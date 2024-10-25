@@ -1,0 +1,95 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-7.jpg" data-overlay="0.1")
+        .container
+
+            .row
+                .col-md-12
+                    h1 Spacé Đecor
+                    ol.breadcrumb.justify-content-center
+                        li.breadcrumb-item: a(href="#") Home
+                        li.breadcrumb-item: a(href="#") Portfolio
+                        li.breadcrumb-item.active Centered Stack
+    // Hero end
+
+    = "\n"
+
+    // Portfolio Single
+    section.module
+        .container
+
+            .row.mb-50
+                .col-md-12
+
+                    .row
+                        .col-md-12
+                            p: img(src="assets/images/portfolio/12.jpg" alt="")
+                            p: img(src="assets/images/portfolio/13.jpg" alt="")
+
+            .row
+                .col-md-12
+                    .space(data-MY="50px")
+
+            .row
+                .col-lg-4
+                    .info-list
+                        li
+                            span.info-list-title Date:
+                            span 10 October, 2018
+                        li
+                            span.info-list-title Client:
+                            span #[a(href="#") 2theme Team]
+                        li
+                            span.info-list-title Category:
+                            span #[a(href="#") Development]
+                        li
+                            span.info-list-title Demo:
+                            span #[a(href="#") 2the.me]
+
+                    hr.m-t-30.m-b-30
+
+                    .info-list.m-b-sm-60
+                        li
+                            span.info-list-title Share:
+                            span
+                                ul.social-icons
+                                    li: a(href="#") #[i.ti-twitter]
+                                        li: a(href="#") #[i.ti-instagram]
+                                        li: a(href="#") #[i.ti-pinterest]
+
+                .col-lg-8
+                    h6.single-portfolio-title Spacé Decor
+                    p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them. Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again.
+    // Portfolio Single end
+
+    = "\n"
+
+    // Related Products
+    section.module.divider-top
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h5 You may also like:
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row.row-portfolio(data-columns="3")
+                .grid-sizer
+                +PortfolioItem("assets/images/portfolio/1.jpg", "Solave Cleanser", "branding", "Digital")
+                +PortfolioItem("assets/images/portfolio/2.jpg", "Monochrome", "digital", "Branding")
+                +PortfolioItem("assets/images/portfolio/3.jpg", "Ellie Cashman", "packaging", "Packaging")
+    // Related Products end
+
+
+

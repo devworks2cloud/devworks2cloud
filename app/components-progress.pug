@@ -1,0 +1,198 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Progress Bar", "Elements")
+
+    = "\n"
+
+    // Progress
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    +Progress("Web Development", "34", "bg-brand")
+                    +Progress("App Development", "72", "bg-success")
+                    +Progress("Theme Development", "54", "bg-info")
+                    +Progress("Plugin Development", "90", "bg-warning")
+                    +Progress("Theme Development", "40", "bg-danger")
+
+            .row.m-t-40
+                .col-md-12
+
+                    ul.nav.nav-tabs
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab' href='#tab-1-1')
+                                h6 HTML
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#tab-1-2')
+                                h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;
+                                    |            Web Development
+                                    |            &lt;span class=&quot;pull-right&quot;&gt;
+                                    |                &lt;span class=&quot;progress-number&quot;&gt;&lt;/span&gt;
+                                    |                %
+                                    |            &lt;/span&gt;
+                                    |        &lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-brand&quot; aria-valuenow=&quot;34&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;App Development
+                                    |            &lt;span class=&quot;pull-right&quot;&gt;
+                                    |                &lt;span class=&quot;progress-number&quot;&gt;&lt;/span&gt;
+                                    |                %
+                                    |            &lt;/span&gt;
+                                    |        &lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-success&quot; aria-valuenow=&quot;72&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;Theme Development
+                                    |            &lt;span class=&quot;pull-right&quot;&gt;
+                                    |                &lt;span class=&quot;progress-number&quot;&gt;&lt;/span&gt;
+                                    |                %
+                                    |            &lt;/span&gt;
+                                    |        &lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-info&quot; aria-valuenow=&quot;54&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;Plugin Development
+                                    |            &lt;span class=&quot;pull-right&quot;&gt;
+                                    |                &lt;span class=&quot;progress-number&quot;&gt;&lt;/span&gt;
+                                    |                %
+                                    |            &lt;/span&gt;
+                                    |        &lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-warning&quot; aria-valuenow=&quot;90&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;
+                                    |            Theme Development
+                                    |            &lt;span class=&quot;pull-right&quot;&gt;
+                                    |                &lt;span class=&quot;progress-number&quot;&gt;&lt;/span&gt;
+                                    |                %
+                                    |            &lt;/span&gt;
+                                    |        &lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-danger&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |+Progress("Web Development", "34", "bg-brand")
+                                    |+Progress("App Development", "72", "bg-success")
+                                    |+Progress("Theme Development", "54", "bg-info")
+                                    |+Progress("Plugin Development", "90", "bg-warning")
+                                    |+Progress("Theme Development", "40", "bg-danger")
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    +Progress("Web Development", "34", "bg-brand progress-bar-striped")
+                    +Progress("App Development", "72", "bg-success progress-bar-striped")
+                    +Progress("Theme Development", "54", "bg-info progress-bar-striped")
+                    +Progress("Plugin Development", "90", "bg-warning progress-bar-striped")
+                    +Progress("Theme Development", "40", "bg-danger progress-bar-striped")
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item
+                            a.nav-link.active(data-toggle='tab' href='#tab-2-1')
+                                h6 HTML
+                        li.nav-item
+                            a.nav-link(data-toggle='tab' href='#tab-2-2')
+                                h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;Web Development&lt;span class=&quot;progress-number pull-right&quot;&gt;&lt;/span&gt;%&lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-brand progress-bar-striped&quot; aria-valuenow=&quot;34&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;App Development&lt;span class=&quot;progress-number pull-right&quot;&gt;&lt;/span&gt;%&lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-success progress-bar-striped&quot; aria-valuenow=&quot;72&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;Theme Development&lt;span class=&quot;progress-number pull-right&quot;&gt;&lt;/span&gt;%&lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-info progress-bar-striped&quot; aria-valuenow=&quot;54&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;Plugin Development&lt;span class=&quot;progress-number pull-right&quot;&gt;&lt;/span&gt;%&lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-warning progress-bar-striped&quot; aria-valuenow=&quot;90&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;progress-item&quot;&gt;
+                                    |    &lt;div class=&quot;progress-title&quot;&gt;
+                                    |        &lt;h6&gt;Theme Development&lt;span class=&quot;progress-number pull-right&quot;&gt;&lt;/span&gt;%&lt;/h6&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;progress&quot;&gt;
+                                    |        &lt;div class=&quot;progress-bar bg-danger progress-bar-striped&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |+Progress("Web Development", "34", "bg-brand progress-bar-striped")
+                                    |+Progress("App Development", "72", "bg-success progress-bar-striped")
+                                    |+Progress("Theme Development", "54", "bg-info progress-bar-striped")
+                                    |+Progress("Plugin Development", "90", "bg-warning progress-bar-striped")
+                                    |+Progress("Theme Development", "40", "bg-danger progress-bar-striped")
+    // Progress end
+
+
+
+
+

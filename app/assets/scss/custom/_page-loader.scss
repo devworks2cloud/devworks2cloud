@@ -1,0 +1,67 @@
+//
+// Preloader
+//
+
+.page-loader {
+    background: $preloader-background;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+}
+
+.page-loader-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    padding: 20px;
+    transform: translateY(-50%);
+}
+
+.spinner {
+    position: relative;
+    height: $preloader-size;
+    width: $preloader-size;
+    margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    position: absolute;
+    background-color: $preloader-color;
+    border-radius: 50%;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: scale(0.0);
+    }
+
+    50% {
+      transform: scale(1.0);
+    }
+}

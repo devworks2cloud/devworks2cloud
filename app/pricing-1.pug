@@ -1,0 +1,110 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-11.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    h2 Pricing Packages
+                    p Experienced and Friendly.
+    // Hero end
+
+    = "\n"
+
+    // Pricing
+    section.module.bg-gray.p-t-0.p-b-40
+        .container
+
+            .space(data-MY="-60px")
+
+            .row
+                +pricing("Starter", "Free", false, "ti-slice")
+                +pricing("Standard", "45", true, "ti-pin-alt")
+                +pricing("Professional", "69", true, "ti-marker-alt")
+
+            .row
+                .col-md-12
+                    .space(data-MY="20px")
+
+            .row
+                .col-md-10.m-auto
+                    .owl-carousel.clients-carousel
+                        .client
+                            img(src="assets/images/clients/1.png" alt="")
+                        .client
+                            img(src="assets/images/clients/2.png" alt="")
+                        .client
+                            img(src="assets/images/clients/3.png" alt="")
+                        .client
+                            img(src="assets/images/clients/4.png" alt="")
+                        .client
+                            img(src="assets/images/clients/5.png" alt="")
+                        .client
+                            img(src="assets/images/clients/6.png" alt="")
+                        .client
+                            img(src="assets/images/clients/7.png" alt="")
+    // Pricing end
+
+    = "\n"
+
+    // Testimonials
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h3 Loved by 50,000+ Customers.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row
+                .col-md-12
+                    .owl-carousel.review-carousel
+                        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+                        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/3.jpg")
+                        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/4.jpg")
+                        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+    // Testimonials end
+
+    = "\n"
+
+    // Callout
+    section.module.bg-gray.p-t-0
+        .container
+
+            .row
+                .col-md-11.m-auto
+                    .space(data-MY="-65px")
+                    p: img(src="assets/images/main/iphone-5.png" alt="")
+
+            .row
+                .col-md-12
+                    .space(data-MY="20px")
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h3 Ready to Start your Project?
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="20px")
+
+            .row
+                .col-md-12
+                    p.text-center
+                        a(href="#" class="btn btn-circle btn-brand") Purchase Template
+    // Callout end

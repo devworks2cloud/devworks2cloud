@@ -1,0 +1,67 @@
+//
+// Styles for Demo pages
+//
+
+.module-cover .demo-heading {
+    font-size: 92px;
+
+    span {
+        letter-spacing: -18px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+
+    .module-cover .demo-heading {
+        font-size: 44px;
+
+        span {
+            letter-spacing: -8px;
+        }
+    }
+
+}
+
+.demo-item {
+    text-align: center;
+    margin-bottom: 60px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+
+    img {
+        border-radius: 3px;
+        box-shadow: 0 50px 100px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+
+    h6 {
+        text-transform: uppercase;
+        letter-spacing: rem(1.6px);
+        font-size: rem(12px);
+    }
+
+    &:hover {
+        transform: translate3d(0, -7px, 0);
+    }
+}
+
+.demo-btn .btn {
+    margin: 0 10px 10px 0;
+}
+
+.nav-sidebar {
+    padding: 0 0 0 20px;
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    a {
+        font-weight: 500;
+        color: $headings-color;
+
+        &:hover {
+            color: theme-color("brand");
+        }
+    }
+}

@@ -1,0 +1,171 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Typography", "Elements")
+
+    = "\n"
+
+    // Typography
+    section.module
+        .container
+
+            .row
+                .col-md-4
+                    h1 H1 Heading
+                    h2 H2 Heading
+                    h3 H3 Heading
+                    h4 H4 Heading
+                    h5 H5 Heading
+                    h6 H6 Heading
+                .col-md-4
+                    h1.text-uppercase H1 Heading
+                    h2.text-uppercase H2 Heading
+                    h3.text-uppercase H3 Heading
+                    h4.text-uppercase H4 Heading
+                    h5.text-uppercase H5 Heading
+                    h6.text-uppercase H6 Heading
+                .col-md-4
+                    h1.serif H1 Heading
+                    h2.serif H2 Heading
+                    h3.serif H3 Heading
+                    h4.serif H4 Heading
+                    h5.serif H5 Heading
+                    h6.serif H6 Heading
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;h1&gt;H1 Heading&lt;/h1&gt;
+                                    |&lt;h2&gt;H2 Heading&lt;/h2&gt;
+                                    |&lt;h3&gt;H3 Heading&lt;/h3&gt;
+                                    |&lt;h4&gt;H4 Heading&lt;/h4&gt;
+                                    |&lt;h5&gt;H5 Heading&lt;/h5&gt;
+                                    |&lt;h6&gt;H6 Heading&lt;/h6&gt;
+                                    |
+                                    |&lt;h1 class=&quot;text-uppercase&quot;&gt;H1 Heading&lt;/h1&gt;
+                                    |&lt;h2 class=&quot;text-uppercase&quot;&gt;H2 Heading&lt;/h2&gt;
+                                    |&lt;h3 class=&quot;text-uppercase&quot;&gt;H3 Heading&lt;/h3&gt;
+                                    |&lt;h4 class=&quot;text-uppercase&quot;&gt;H4 Heading&lt;/h4&gt;
+                                    |&lt;h5 class=&quot;text-uppercase&quot;&gt;H5 Heading&lt;/h5&gt;
+                                    |&lt;h6 class=&quot;text-uppercase&quot;&gt;H6 Heading&lt;/h6&gt;
+                                    |
+                                    |&lt;h1 class=&quot;serif&quot;&gt;H1 Heading&lt;/h1&gt;
+                                    |&lt;h2 class=&quot;serif&quot;&gt;H2 Heading&lt;/h2&gt;
+                                    |&lt;h3 class=&quot;serif&quot;&gt;H3 Heading&lt;/h3&gt;
+                                    |&lt;h4 class=&quot;serif&quot;&gt;H4 Heading&lt;/h4&gt;
+                                    |&lt;h5 class=&quot;serif&quot;&gt;H5 Heading&lt;/h5&gt;
+                                    |&lt;h6 class=&quot;serif&quot;&gt;H6 Heading&lt;/h6&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |h1 H1 Heading
+                                    |h2 H2 Heading
+                                    |h3 H3 Heading
+                                    |h4 H4 Heading
+                                    |h5 H5 Heading
+                                    |h6 H6 Heading
+                                    |
+                                    |h1.text-uppercase H1 Heading
+                                    |h2.text-uppercase H2 Heading
+                                    |h3.text-uppercase H3 Heading
+                                    |h4.text-uppercase H4 Heading
+                                    |h5.text-uppercase H5 Heading
+                                    |h6.text-uppercase H6 Heading
+                                    |
+                                    |h1.serif H1 Heading
+                                    |h2.serif H2 Heading
+                                    |h3.serif H3 Heading
+                                    |h4.serif H4 Heading
+                                    |h5.serif H5 Heading
+                                    |h6.serif H6 Heading
+
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-6
+                    blockquote.blockquote
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.
+                        footer.blockquote-footer Amanda Pollock, Google Inc.
+                .col-md-6
+                    blockquote.blockquote.text-right
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.
+                        footer.blockquote-footer Amanda Pollock, Google Inc.
+            .row.m-t-40
+                .col-md-8.m-auto
+                    blockquote.blockquote.text-center
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.
+                        footer.blockquote-footer Amanda Pollock, Google Inc.
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-2-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-2-2"): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;blockquote class=&quot;blockquote&quot;&gt;
+                                    |    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.&lt;/p&gt;
+                                    |    &lt;footer class=&quot;blockquote-footer&quot;&gt;Amanda Pollock, Google Inc.&lt;/footer&gt;
+                                    |&lt;/blockquote&gt;
+                                    |
+                                    |&lt;blockquote class=&quot;blockquote text-right&quot;&gt;
+                                    |    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.&lt;/p&gt;
+                                    |    &lt;footer class=&quot;blockquote-footer&quot;&gt;Amanda Pollock, Google Inc.&lt;/footer&gt;
+                                    |&lt;/blockquote&gt;
+                                    |
+                                    |&lt;blockquote class=&quot;blockquote text-center&quot;&gt;
+                                    |    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.&lt;/p&gt;
+                                    |    &lt;footer class=&quot;blockquote-footer&quot;&gt;Amanda Pollock, Google Inc.&lt;/footer&gt;
+                                    |&lt;/blockquote&gt;
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |blockquote.blockquote
+                                    |    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.
+                                    |    footer.blockquote-footer Amanda Pollock, Google Inc.
+                                    |
+                                    |blockquote.blockquote.text-right
+                                    |    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.
+                                    |    footer.blockquote-footer Amanda Pollock, Google Inc.
+                                    |
+                                    |blockquote.blockquote.text-center
+                                    |    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, maiores esse temporibus accusantium quas soluta quis sed rerum.
+                                    |    footer.blockquote-footer Amanda Pollock, Google Inc.
+
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    h6 Lead and Paragraph
+                    p.lead Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
+                    p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-3-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-3-2"): h6 PUG
+                    .tab-content
+                        #tab-3-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;p class=&quot;lead&quot;&gt;Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.&lt;/p&gt;
+                                    |&lt;p&gt;Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.&lt;/p&gt;
+                        #tab-3-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |p.lead Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
+                                    |p Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack nostrud. Seitan High Life reprehenderit consectetur cupidatat kogi about me. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
+    // Typography end

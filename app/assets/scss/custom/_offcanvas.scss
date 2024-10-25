@@ -1,0 +1,89 @@
+//
+// Offcanvas
+//
+
+body:after,
+.off-canvas-sidebar {
+    transition: transform .2s cubic-bezier(.645, .045, .355, 1);
+}
+
+body:after {
+    background: $offcanvas-overlay-color;
+    position: fixed;
+    height: 1px;
+    width: 1px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: -1px;
+    visibility: hidden;
+    z-index: 9998;
+    content: "";
+    opacity: 0;
+    cursor: url("../images/close.png"), pointer;
+}
+
+body.off-canvas-sidebar-open:after {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.off-canvas-sidebar-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 40px;
+    height: 100%;
+    width: auto;
+}
+
+.off-canvas-header {
+    text-align: right;
+    font-size: rem(12px);
+    margin-bottom: $widget-margin-y;
+}
+
+.off-canvas-sidebar {
+    position: fixed;
+    background: $offcanvas-background;
+    height: 100%;
+    width: $offcanvas-width;
+    right: -$offcanvas-width;
+    z-index: 9999;
+    top: 0;
+
+    .off-canvas-sidebar-open & {
+        transform: translateX(-$offcanvas-width);
+    }
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        color: $offcanvas-headings-color;
+    }
+
+    a, .social-icons > li > a {
+        color: $offcanvas-link-color;
+
+        &:hover,
+        &:focus {
+            color: lighten($offcanvas-link-color, 15%);
+        }
+    }
+
+    .widget-categories ul li,
+    .widget-recent-entries ul li,
+    .widget-recent-entries-custom ul li {
+        border-color: lighten($offcanvas-background, 5%);
+    }
+
+    .form-control {
+        background: darken($offcanvas-background, 2%);
+        border-color: darken($offcanvas-background, 2.5%);
+    }
+}

@@ -1,0 +1,339 @@
+//------------------------------------------------------------------
+//- Page Header
+//------------------------------------------------------------------
+
+mixin PageHeader(title, breadcrumb)
+    // Page Header
+    section.module-page-title.bg-gray
+        .container
+            .row.align-items-center
+                .col-md-6
+                    .page-title-desc
+                        h1.page-title-heading= title
+                        //p This theme will shake your world.
+                .col-md-6
+                    ol.breadcrumb
+                        li.breadcrumb-item: a(href="#") Home
+                        li.breadcrumb-item: a(href="#")= breadcrumb
+                        li.breadcrumb-item.active= title
+    // Page Header end
+
+//------------------------------------------------------------------
+//- Post Standard
+//------------------------------------------------------------------
+
+mixin PostItem(image, title, sticky)
+
+    = "\n"
+
+    // Post
+    if sticky == true
+        - var extra_class = "sticky"
+    else
+        - var extra_class = ""
+
+    article.post(class=extra_class)
+        .post-preview
+            a(href="#")
+                img(src=image alt="")
+        .post-wrapper
+            .post-header
+                h2.post-title
+                    a(href="blog-single.html")= title
+                ul.post-meta
+                    li November 18, 2016
+                    li #[a(href="#") Branding], #[a(href="#") Design]
+                    li #[a(href="#") 3 Comments]
+            .post-content
+                p Just then her head struck against the roof of the hall in fact she was now more than nine feet high and she at once took up the little golden key and hurried off to the garden door.	The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them.
+            .post-more
+                a(href="#") Read more
+    // Post end
+
+//------------------------------------------------------------------
+//- Post masonry
+//------------------------------------------------------------------
+
+mixin PostMasonry(image, title, content)
+
+    // Post
+    article.post
+        if ( image != "")
+            .post-preview
+                a(href="#")
+                    img(src=image alt="")
+        .post-wrapper
+            .post-header
+                h2.post-title
+                    a(href="blog-single.html")= title
+            .post-content
+                p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                p #[a(href="#") Read more]
+    // Post end
+
+//------------------------------------------------------------------
+//- Post thumbnail
+//------------------------------------------------------------------
+
+mixin PostThumbnail(image, title, content)
+    // Post
+    article.post.row.align-items-center
+        .col-md-5
+            .post-preview
+                a(href="#")
+                    img(src=image alt="")
+        .col-md-7
+            .post-wrapper
+                .post-header
+                    h2.post-title
+                        a(href="blog-single.html")= title
+                    ul.post-meta
+                        li November 18, 2016
+                        li #[a(href="#") Branding], #[a(href="#") Design]
+                        li #[a(href="#") 3 Comments]
+                .post-content
+                    p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                    p #[a(href="#") Read more]
+    // Post end
+
+//------------------------------------------------------------------
+//- Counters
+//------------------------------------------------------------------
+
+mixin Counter(title, number, icon)
+    .counter
+        if icon
+            .counter-icon
+                span(class=icon)
+        .counter-number
+            h6: strong.counter-timer(data-from="0" data-to=number) 0
+        .counter-title= title
+
+//------------------------------------------------------------------
+//- Countdown
+//------------------------------------------------------------------
+
+mixin Countdown(title, tiempoRestante, icon, showDays, showHours, showMinutes, showSeconds, id)
+    - const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+    - const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    - const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+    - const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+    .counter 
+        if icon
+            .counter-icon
+                span(class=icon)
+        .counter-number
+            if showDays
+                h6: strong.counter-timer(id=id data-from="0" data-to=dias) #{dias}
+            if showHours
+                h6: strong.counter-timer(id=id data-from="0" data-to=horas) #{horas}
+            if showMinutes
+                h6: strong.counter-timer(id=id data-from="0" data-to=minutos) #{minutos}
+            if showSeconds
+                h6: strong.counter-timer(id=id data-from="0" data-to=segundos) #{segundos}
+        .counter-title= title
+//------------------------------------------------------------------
+//- Progress Bars
+//------------------------------------------------------------------
+
+mixin Progress(title, counter, color)
+    .progress-item
+        .progress-title
+            h6
+                =title
+                span.float-right
+                    span.progress-number
+                    | %
+        .progress
+            .progress-bar(class=color aria-valuenow=counter aria-valuemin="0" aria-valuemax="100")
+
+//------------------------------------------------------------------
+//- Pie Chart
+//------------------------------------------------------------------
+
+mixin PieChart(title, counter)
+    .pie-chart
+        .chart(data-percent=counter)
+            span.chart-text
+                span: i.icons.icon-magic-wand
+        .chart-title
+            h6=title
+        .chart-content
+            p Map where your photos were taken and discover local points of interest. Map where your photos.
+
+//------------------------------------------------------------------
+//- Team
+//------------------------------------------------------------------
+
+mixin team(image, name, role)
+    .team-item
+        .team-image
+            img(src=image alt="")
+            .team-wrap
+                .team-content
+                    h6.team-name= name
+                    .team-role= role
+                .team-content-social
+                    ul
+                        li: a(href="#") #[i.fab.fa-twitter]
+                        li: a(href="#") #[i.fab.fa-instagram]
+                        li: a(href="#") #[i.fab.fa-pinterest-p]
+
+//------------------------------------------------------------------
+//- Portfolio
+//------------------------------------------------------------------
+
+mixin PortfolioItem(image, title, filter, category)
+    .portfolio-item(class = filter)
+        .portfolio-item-wrapper
+            .portfolio-item-img
+                img(src = image alt="")
+            .portfolio-item-caption
+                h6.portfolio-item-title= title
+                span.portfolio-item-subtitle.serif= category
+            a.portfolio-item-link(href="portfolio-single-1.html")
+
+//------------------------------------------------------------------
+//- Icon Box Left
+//------------------------------------------------------------------
+
+mixin IconBox(icon, title, content, align, link)
+    if (typeof align === 'undefined')
+        - align = ''
+
+    .icon-box(class=align)
+        .icon-box-icon
+            span(class=icon)
+        .icon-box-title
+            h6= title
+        .icon-box-content
+            p!= content
+        if (link == true)
+            .icon-box-link
+                a(href="#") Read more
+
+mixin iconBoxLeft(icon, title, content)
+    .icon-box.icon-box-left
+        .icon-box-icon
+            span(class=icon)
+        .icon-box-title
+            h6= title
+        .icon-box-content
+            p!= content
+
+//------------------------------------------------------------------
+//- Alert
+//------------------------------------------------------------------
+
+mixin Alert(classa)
+    .alert(class=classa)
+        | #[strong Heads up!] This alert needs #[a(href="#" class="alert-link") your attention], but it's not super important.
+
+//------------------------------------------------------------------
+//- Testimonials
+//------------------------------------------------------------------
+
+mixin TestimonialsSlider(name, content, icon)
+
+    if (typeof icon === 'undefined')
+        - icon = ''
+
+    .review
+        .review-icons
+            if icon
+                h2.ti-comment-alt
+            else
+                img(src="assets/images/avatar/1.jpg" alt="")
+        .review-content
+            blockquote
+                p!=content
+                footer.blockquote-footer=name
+
+mixin TestimonialsCard(name, content, image)
+    .review-card
+        .review-card-content
+            p=content
+        .review-card-author
+            .review-card-author-photo
+                img(src=image alt="")
+            .review-card-author-info
+                h6.review-card-author-title= name
+                span.star-rating
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.far.fa-star
+
+//------------------------------------------------------------------
+//- Features
+//------------------------------------------------------------------
+
+mixin Feature(thumb, title, content)
+    .feature
+        .feature-thumb
+            img(src=thumb alt="")
+        .feature-content
+            h6=title
+            p=content
+            a(href="#" class="feature-link") Read more
+
+//------------------------------------------------------------------
+//- Pricing Table
+//------------------------------------------------------------------
+
+mixin pricing(title, price, type, icon)
+    if type
+        - var class_type = "pricing-popular"
+    .col-md-4.pricing-wrapper( class = class_type )
+        .pricing-header
+            if icon
+                .pricing-icon
+                    i( class = icon )
+            .pricing-title= title
+        .pricing-price
+            if type
+                span $
+            = price
+        .pricing-body
+            p Map where your photos<br>were taken and discover local<br>points of interest.
+        .pricing-footer
+            a(href="#" class="btn btn-circle btn-brand") Download
+
+//------------------------------------------------------------------
+//- Shop Grid Item
+//------------------------------------------------------------------
+
+mixin ShopGridItem(thumb, title, price)
+    .shop-grid-item
+        .shop-item-thumb
+            a(href="#")
+                img(src=thumb alt="")
+            .shop-item-hidden
+                a(href="#" class="btn btn-new-white") Add to cart
+        .shop-item-captions
+            h6.shop-item-title=title
+            span.shop-item-price=price
+
+//------------------------------------------------------------------
+//- Shop Cart item
+//------------------------------------------------------------------
+
+mixin CreateCartItem(image, title, price)
+    tr
+        td
+            a(href='#')
+                img.cart-thumbnail(src=image alt="")
+        td
+            h6.m-b-0
+                a(href='#')= title
+            p: small Color: black | Size: 36.5
+        td
+            = price
+        td
+            input.form-control(type="number", step="1", min="1", value="1")
+        td
+            = price
+        td.cart-remove
+            a(href='#')
+                i.ti-close

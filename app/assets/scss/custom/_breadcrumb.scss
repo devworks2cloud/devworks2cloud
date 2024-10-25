@@ -1,0 +1,12 @@
+//
+// Breadcrumb
+//
+
+.breadcrumb-item {
+    font-size: $breadcrumb-font-size;
+
+    + .breadcrumb-item::before {
+        font-size: $breadcrumb-divider-font-size;
+        opacity: .4;
+    }
+}

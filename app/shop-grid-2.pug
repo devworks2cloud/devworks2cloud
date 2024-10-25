@@ -1,0 +1,70 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax(data-background="assets/images/module-14.jpg" data-overlay="0.1")
+        .container
+
+            .row
+                .col-md-12
+                    h2 Shop Grid
+                    ol.breadcrumb
+                        li.breadcrumb-item: a(href="#") Home
+                        li.breadcrumb-item: a(href="#") Shop
+                        li.breadcrumb-item.active 3 Columns
+    // Hero end
+
+    = "\n"
+
+    // Shop Grid
+    section.module
+        .container
+
+            .row
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/1.jpg", "Classic Chair", "$20.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/2.jpg", "Thermo Flask", "$30.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/3.jpg", "Folder Calendar", "$50.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/4.jpg", "Amber Body Lotion", "$80.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/5.jpg", "Solo Headphones", "$100.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/6.jpg", "Ceramic Watch", "$20.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/7.jpg", "Wooden Bathroom Set", "$40.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/8.jpg", "Wedge Slippers", "$26.00")
+                .col-md-4
+                    +ShopGridItem("assets/images/shop/9.jpg", "Plain Glass Bottle", "$40.00")
+
+            = "\n"
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            = "\n"
+
+            // Page Navigation
+            .row
+                .col-md-12
+
+                    nav
+                        ul.pagination.justify-content-center
+                            li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-left
+                            li.page-item.active: a(href="#" class="page-link") 1
+                            li.page-item: a(href="#" class="page-link") 2
+                            li.page-item: a(href="#" class="page-link") 3
+                            li.page-item: a(href="#" class="page-link") 4
+                            li.page-item: a(href="#" class="page-link"): span.fas.fa-angle-right
+            // Page Navigation end
+    // Shop Grid end

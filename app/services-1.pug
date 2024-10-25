@@ -1,0 +1,145 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-8.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    h1 We have been helping<br> build brands
+                    p Experienced and Friendly.
+    // Hero end
+
+    = "\n"
+
+    // About
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Digital Design.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-12
+                    p: img(src="assets/images/main/services-1.jpg" alt="" class="img-shadow")
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row
+                .col-md-4
+                    .number-box
+                        h6.number-box-header
+                            span.number-box-number 01
+                            span.number-box-title Development
+                        .number-box-content
+                            p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                .col-md-4
+                    .number-box
+                        h6.number-box-header
+                            span.number-box-number 02
+                            span.number-box-title Branding
+                        .number-box-content
+                            p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                .col-md-4
+                    .number-box
+                        h6.number-box-header
+                            span.number-box-number 03
+                            span.number-box-title Web Design
+                        .number-box-content
+                            p See how your users experience your website in realtime or view trends to see any changes in performance over time.
+    // About end
+
+    = "\n"
+
+    // Progress Bars
+    section.module.divider-top
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Special Treats.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-6
+                    +Progress("Web Development", "60", "bg-brand")
+                    +Progress("User Experience", "80", "bg-brand")
+                    +Progress("Front-End Framework", "50", "bg-brand")
+                .col-md-6
+                    +Progress("Great Support", "60", "bg-brand")
+                    +Progress("Fully Responsive", "80", "bg-brand")
+                    +Progress("Trendy Design", "50", "bg-brand")
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+    // Progress Bars end
+
+    = "\n"
+
+    // Services
+    section.module.bg-gray.p-t-0
+        .container
+
+            .row
+                .col-md-11.m-auto
+                    .space(data-MY="-65px")
+                    p: img(src="assets/images/main/iphone-5.png" alt="")
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row
+                .col-lg-3.col-md-6
+                    +IconBox("ti-layout", "Visual Composer", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-cup", "Revolution Slider", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-harddrives", "User Experience", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-desktop", "Fully Responsive", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+    // Services end
+
+    = "\n"
+
+    // Features
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Why work with us?
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-md-4
+                    +Feature("assets/images/features/1.jpg", "Web Design", "See how your users experience your website in realtime or view trends to see any changes in performance over time.")
+                .col-md-4
+                    +Feature("assets/images/features/2.jpg", "Plugin Development", "See how your users experience your website in realtime or view trends to see any changes in performance over time.")
+                .col-md-4
+                    +Feature("assets/images/features/3.jpg", "Theme Development", "See how your users experience your website in realtime or view trends to see any changes in performance over time.")
+    // Features end

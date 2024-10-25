@@ -1,0 +1,65 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Pie Chart", "Elements")
+
+    = "\n"
+
+    // Pie
+    section.module
+        .container
+
+            .row
+                .col-md-3
+                    +PieChart("Web Design", "70")
+                .col-md-3
+                    +PieChart("Plugin Development", "80")
+                .col-md-3
+                    +PieChart("Theme Development", "90")
+                .col-md-3
+                    +PieChart("Wordpress Code", "100")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    ...
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;pie-chart&quot;&gt;
+                                    |            &lt;div class=&quot;chart&quot; data-percent=&quot;82&quot;&gt;
+                                    |                &lt;span class=&quot;chart-text&quot;&gt;
+                                    |                    &lt;span&gt;&lt;i class=&quot;icons icon-magic-wand&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                    |                &lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;chart-title&quot;&gt;
+                                    |                &lt;h6&gt;Web Design&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;chart-content&quot;&gt;
+                                    |                &lt;p&gt;Map where your photos were taken and discover local points of interest. Map where your photos.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    ...
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    .col-md-3
+                                    |        +PieChart("Web Design", "70")
+                                    |    .col-md-3
+                                    |        +PieChart("Plugin Development", "80")
+                                    |    .col-md-3
+                                    |        +PieChart("Theme Development", "90")
+                                    |    .col-md-3
+                                    |        +PieChart("Wordpress Code", "100")
+    // Pie end

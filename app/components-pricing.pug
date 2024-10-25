@@ -1,0 +1,162 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Pricing", "Elements")
+
+    = "\n"
+
+    // Pricing
+    section.module
+        .container
+
+            .row
+                +pricing("Starter", "Free", false, "ti-slice")
+                +pricing("Standard", "45", true, "ti-pin-alt")
+                +pricing("Professional", "69", true, "ti-marker-alt")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-4 pricing-wrapper&quot;&gt;
+                                    |        &lt;div class=&quot;pricing-header&quot;&gt;
+                                    |            &lt;div class=&quot;pricing-icon&quot;&gt;
+                                    |                &lt;i class=&quot;ti-slice&quot;&gt;&lt;/i&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;pricing-title&quot;&gt;Starter&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-price&quot;&gt;Free&lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-body&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos&lt;br&gt;were taken and discover local&lt;br&gt;points of interest.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-footer&quot;&gt;
+                                    |            &lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Download&lt;/a&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |
+                                    |    &lt;div class=&quot;col-md-4 pricing-wrapper&quot;&gt;
+                                    |        &lt;div class=&quot;pricing-header&quot;&gt;
+                                    |            &lt;div class=&quot;pricing-icon&quot;&gt;
+                                    |                &lt;i class=&quot;ti-pin-alt&quot;&gt;&lt;/i&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;pricing-title&quot;&gt;Standard&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-price&quot;&gt;
+                                    |            &lt;span&gt;$&lt;/span&gt;45
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-body&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos&lt;br&gt;were taken and discover local&lt;br&gt;points of interest.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-footer&quot;&gt;
+                                    |            &lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Download&lt;/a&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |
+                                    |    &lt;div class=&quot;col-md-4 pricing-wrapper&quot;&gt;
+                                    |        &lt;div class=&quot;pricing-header&quot;&gt;
+                                    |            &lt;div class=&quot;pricing-icon&quot;&gt;
+                                    |                &lt;i class=&quot;ti-marker-alt&quot;&gt;&lt;/i&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;pricing-title&quot;&gt;Professional&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-price&quot;&gt;
+                                    |            &lt;span&gt;$&lt;/span&gt;69
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-body&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos&lt;br&gt;were taken and discover local&lt;br&gt;points of interest.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-footer&quot;&gt;
+                                    |            &lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Download&lt;/a&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    +pricing("Starter", "Free", false, "ti-slice")
+                                    |    +pricing("Standard", "45", true, "ti-pin-alt")
+                                    |    +pricing("Professional", "69", true, "ti-marker-alt")
+    // Pricing end
+
+    = "\n"
+
+    // Pricing
+    section.module.divider-top
+        .container
+
+            .row
+                +pricing("Starter", "Free", false)
+                +pricing("Standard", "45", true)
+                +pricing("Professional", "69", true)
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-2-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-2-2'): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-4 pricing-wrapper&quot;&gt;
+                                    |        &lt;div class=&quot;pricing-header&quot;&gt;
+                                    |            &lt;div class=&quot;pricing-title&quot;&gt;Starter&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-price&quot;&gt;Free&lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-body&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos&lt;br&gt;were taken and discover local&lt;br&gt;points of interest.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-footer&quot;&gt;
+                                    |            &lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Download&lt;/a&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |
+                                    |    &lt;div class=&quot;col-md-4 pricing-wrapper&quot;&gt;
+                                    |        &lt;div class=&quot;pricing-header&quot;&gt;
+                                    |            &lt;div class=&quot;pricing-title&quot;&gt;Standard&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-price&quot;&gt;
+                                    |            &lt;span&gt;$&lt;/span&gt;45
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-body&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos&lt;br&gt;were taken and discover local&lt;br&gt;points of interest.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-footer&quot;&gt;
+                                    |            &lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Download&lt;/a&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |
+                                    |    &lt;div class=&quot;col-md-4 pricing-wrapper&quot;&gt;
+                                    |        &lt;div class=&quot;pricing-header&quot;&gt;
+                                    |            &lt;div class=&quot;pricing-title&quot;&gt;Professional&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-price&quot;&gt;
+                                    |            &lt;span&gt;$&lt;/span&gt;69
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-body&quot;&gt;
+                                    |            &lt;p&gt;Map where your photos&lt;br&gt;were taken and discover local&lt;br&gt;points of interest.&lt;/p&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;pricing-footer&quot;&gt;
+                                    |            &lt;a class=&quot;btn btn-circle btn-brand&quot; href=&quot;#&quot;&gt;Download&lt;/a&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    +pricing("Starter", "Free", false)
+                                    |    +pricing("Standard", "45", true)
+                                    |    +pricing("Professional", "69", true)
+    // Pricing end

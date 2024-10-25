@@ -1,0 +1,71 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Players", "Elements")
+
+    = "\n"
+
+    // Players
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    .modal-video-container
+                        img(src="assets/images/main/services-1.jpg" alt="")
+                        a(href="//https://www.youtube.com/watch?v=0aCbYxJ9gus" class="play-button")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;modal-video-container&quot;&gt;
+                                    |    &lt;img src=&quot;assets/images/main/services-1.jpg&quot; alt=&quot;&quot;&gt;
+                                    |    &lt;a class=&quot;play-button&quot; href=&quot;//https://www.youtube.com/watch?v=0aCbYxJ9gus&quot;&gt;&lt;/a&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.modal-video-container
+                                    |    img(src="assets/images/main/services-1.jpg" alt="")
+                                    |    a(href="https://www.youtube.com/watch?v=0aCbYxJ9gus" class="play-button")
+    // Players end
+
+    = "\n"
+
+    // Players
+    section.module.divider-top
+        .container
+            .row
+                .col-md-6
+                    p: iframe(width="500" height="281"  src="//www.youtube.com/embed/0aCbYxJ9gus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)
+                .col-md-6
+                    p: iframe(src="//player.vimeo.com/video/95192276?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-2-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-2-2"): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;p&gt;&lt;iframe width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; src=&quot;//www.youtube.com/embed/EMy5krGcoOU&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+                                    |&lt;p&gt;&lt;iframe src=&quot;//player.vimeo.com/video/95192276?title=0&amp;amp;amp;amp;byline=0&amp;amp;amp;amp;portrait=0&amp;amp;amp;amp;color=ffffff&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |p: iframe(width="500" height="281" frameborder="0" src="//www.youtube.com/embed/EMy5krGcoOU" allowfullscreen)
+                                    |p: iframe(src="//player.vimeo.com/video/95192276?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ffffff" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+    // Players end
+

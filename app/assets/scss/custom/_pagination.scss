@@ -1,0 +1,28 @@
+//
+// Pagination
+//
+
+.page-item {
+
+    &:first-child {
+        .page-link {
+            border-radius: 100%;
+        }
+    }
+
+    &:last-child {
+        .page-link {
+            border-radius: 100%;
+        }
+    }
+}
+
+.page-link {
+    border-radius: 100%;
+    font-weight: 600;
+    margin-left: 8px;
+
+    &:focus {
+        box-shadow: none;
+    }
+}

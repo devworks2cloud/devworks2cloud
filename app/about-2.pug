@@ -1,0 +1,132 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-6.jpg" data-jarallax-video="https://www.youtube.com/watch?v=ARvle-Ei6Sw" data-overlay="0.85" data-gradient="1")
+        .container
+
+            .row
+                .col-md-12
+                    h1 We are a creative agency <br>based in New York
+                    p Creating digital products for creative people
+    // Hero end
+
+    = "\n"
+
+    // About
+    section.module.bg-gray.p-t-0
+        .container
+
+            .row
+                .col-md-10.m-auto
+                    .space(data-mY="-60px")
+                    .modal-video-container
+                        img(src="assets/images/main/player.jpg" alt="")
+                        a(href="https://www.youtube.com/watch?v=0aCbYxJ9gus" class="play-button")
+
+            .row
+                .col-md-12
+                    .space(data-mY="60px")
+
+            .row
+                .col-lg-3.col-md-6
+                    +IconBox("ti-layout", "Visual Composer", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-cup", "Revolution Slider", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-harddrives", "User Experience", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-desktop", "Fully Responsive", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+    // About end
+
+    // Team
+    section.module
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Creative People.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="60px")
+
+            .row
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/2.jpg", "Richard Bauer", "Developer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/3.jpg", "John Pope", "Founder")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/4.jpg", "Sara Smith", "Designer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/5.jpg", "Emma Connor", "Developer")
+                .col-lg-4.col-md-6
+                    +team("assets/images/team/6.jpg", "Peter Chapman", "Founder")
+
+            .row
+                .col-md-12
+                    .space(data-MY="30px")
+
+            .row
+                .col-md-12
+                    p.text-center: a(href="#" class="btn btn-circle btn-brand") Get in touch
+    // Team end
+
+    = "\n"
+
+    // Testimonials
+    section.module.bg-gray
+        .container
+
+            .row
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h3 Loved by 50,000+ Customers.
+                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+
+            .row
+                .col-md-12
+                    .space(data-MY="40px")
+
+            .row
+                .col-md-12
+                    .owl-carousel.review-carousel
+                        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+                        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/3.jpg")
+                        +TestimonialsCard("Emma Connor", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/4.jpg")
+                        +TestimonialsCard("Sara Smith", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/1.jpg")
+                        +TestimonialsCard("Peter Chapman", "Map where your photos were taken and discover local points of interest. Map where your photos.", "assets/images/avatar/2.jpg")
+
+            .row
+                .col-md-10.m-auto
+                    .owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+                        .client
+                            img(src="assets/images/clients/1.png" alt="")
+                        .client
+                            img(src="assets/images/clients/2.png" alt="")
+                        .client
+                            img(src="assets/images/clients/3.png" alt="")
+                        .client
+                            img(src="assets/images/clients/4.png" alt="")
+                        .client
+                            img(src="assets/images/clients/5.png" alt="")
+                        .client
+                            img(src="assets/images/clients/6.png" alt="")
+                        .client
+                            img(src="assets/images/clients/7.png" alt="")
+    // Testimonials end
+
+
+
+
+
+

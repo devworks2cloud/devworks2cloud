@@ -1,0 +1,113 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Clients", "Elements")
+
+    = "\n"
+
+    // Clients
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    .owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+                        .client
+                            img(src="assets/images/clients/1.png" alt="")
+                        .client
+                            img(src="assets/images/clients/2.png" alt="")
+                        .client
+                            img(src="assets/images/clients/3.png" alt="")
+                        .client
+                            img(src="assets/images/clients/4.png" alt="")
+                        .client
+                            img(src="assets/images/clients/5.png" alt="")
+                        .client
+                            img(src="assets/images/clients/6.png" alt="")
+                        .client
+                            img(src="assets/images/clients/7.png" alt="")
+
+            .row.m-t-40
+                .col-md-12
+                    .owl-carousel.clients-carousel
+                        .client
+                            img(src="assets/images/clients/1.png" alt="")
+                        .client
+                            img(src="assets/images/clients/2.png" alt="")
+                        .client
+                            img(src="assets/images/clients/3.png" alt="")
+                        .client
+                            img(src="assets/images/clients/4.png" alt="")
+                        .client
+                            img(src="assets/images/clients/5.png" alt="")
+                        .client
+                            img(src="assets/images/clients/6.png" alt="")
+                        .client
+                            img(src="assets/images/clients/7.png" alt="")
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;owl-carousel clients-carousel&quot; data-carousel-options=&quot;{'dots': false}&quot;&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/1.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/2.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/3.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/4.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/5.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/6.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/7.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;owl-carousel clients-carousel&quot;&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/1.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/2.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/3.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/4.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/5.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/6.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |    &lt;div class=&quot;client&quot;&gt;&lt;img src=&quot;assets/images/clients/7.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.owl-carousel.clients-carousel(data-carousel-options='{"dots": false}')
+                                    |    .client
+                                    |        img(src="assets/images/clients/1.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/2.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/3.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/4.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/5.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/6.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/7.png" alt="")
+                                    |
+                                    |.owl-carousel.clients-carousel
+                                    |    .client
+                                    |        img(src="assets/images/clients/1.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/2.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/3.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/4.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/5.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/6.png" alt="")
+                                    |    .client
+                                    |        img(src="assets/images/clients/7.png" alt="")
+    // Clients end

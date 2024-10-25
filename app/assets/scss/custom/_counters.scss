@@ -1,0 +1,22 @@
+//
+// Сounters
+//
+
+.counter {
+    text-align: center;
+    padding: 0 0 20px;
+
+    .counter-icon {
+        font-size: rem(34px);
+        color: theme-color("brand");
+    }
+
+    .counter-number h6 {
+        font-size: rem(50px);
+        margin: 0;
+    }
+
+    .counter-title {
+        letter-spacing: rem(.5px);
+    }
+}

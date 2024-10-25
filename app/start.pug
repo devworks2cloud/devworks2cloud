@@ -1,0 +1,106 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    section.module-cover.parallax.text-center(data-background="assets/images/module-10.jpg" data-overlay="1" data-gradient="1")
+        .container
+
+            .row
+                .col-md-12
+                    .space(data-mY="60px")
+                    h1.demo-heading: strong De#[span v]Works2Cl#[span o]ud
+                    p.m-b-40 Quickly create your One or Multi Page website in fastest<br> and easiest way with SASS and Pug based template.
+                    .space(data-MY="60px")
+
+    = "\n"
+
+    section.module.p-t-0
+        .container
+
+            .row
+                .col-md-12.m-auto
+                    .space(data-mY="-120px")
+                    p: img(src="assets/images/main/macbook.png" alt="")
+                    .space(data-mY="80px")
+
+        .container-fluid(style="max-width: 1600px;")
+
+            .row
+                .col-md-6
+                    h6.text-special.text-center.m-b-40 Multi Page Demos
+
+                    .row
+                        .col-md-6
+                            .demo-item
+                                a(href="index.html"): img(src="assets/images/demo/1.jpg" alt="")
+                                h6 Parallax
+                        .col-md-6
+                            .demo-item
+                                a(href="index-2.html"): img(src="assets/images/demo/2.jpg" alt="")
+                                h6 Slider - Slide
+                        .col-md-6
+                            .demo-item
+                                a(href="index-3.html"): img(src="assets/images/demo/3.jpg" alt="")
+                                h6 Slider - Fade
+                        .col-md-6
+                            .demo-item
+                                a(href="index-4.html"): img(src="assets/images/demo/4.jpg" alt="")
+                                h6 Youtube
+                        .col-md-6
+                            .demo-item
+                                a(href="index-5.html"): img(src="assets/images/demo/5.jpg" alt="")
+                                h6 Vimeo
+                        .col-md-6
+                            .demo-item
+                                a(href="index-6.html"): img(src="assets/images/demo/6.jpg" alt="")
+                                h6 Local Video
+                        .col-md-6
+                            .demo-item
+                                a(href="index-7.html"): img(src="assets/images/demo/7.jpg" alt="")
+                                h6 Gradient Style 1
+                        .col-md-6
+                            .demo-item
+                                a(href="index-8.html"): img(src="assets/images/demo/8.jpg" alt="")
+                                h6 Gradient Style 2
+
+                .col-md-6
+                    h6.text-special.text-center.m-b-40 One Page Demos
+
+                    .row
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index.html"): img(src="assets/images/demo/op-1.jpg" alt="")
+                                h6 Parallax
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-2.html"): img(src="assets/images/demo/op-2.jpg" alt="")
+                                h6 Slider - Slide
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-3.html"): img(src="assets/images/demo/op-3.jpg" alt="")
+                                h6 Slider - Fade
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-4.html"): img(src="assets/images/demo/op-4.jpg" alt="")
+                                h6 Youtube
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-5.html"): img(src="assets/images/demo/op-5.jpg" alt="")
+                                h6 Vimeo
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-6.html"): img(src="assets/images/demo/op-6.jpg" alt="")
+                                h6 Local Video
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-7.html"): img(src="assets/images/demo/op-7.jpg" alt="")
+                                h6 Gradient Style 1
+                        .col-md-6
+                            .demo-item
+                                a(href="op-index-8.html"): img(src="assets/images/demo/op-8.jpg" alt="")
+                                h6 Gradient Style 2

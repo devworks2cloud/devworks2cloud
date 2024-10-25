@@ -1,0 +1,41 @@
+extends include/templates/layout
+
+block vars
+    - var header_transparent = true;
+
+append css
+
+append content
+
+    // Hero
+    section.module-cover.parallax.text-center(data-background="assets/images/module-5.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-12
+                    h2 No Sidebar
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Quisque eget mi at eros venenatis
+    // Hero end
+
+    = "\n"
+
+    // Blog
+    section.module
+        .container
+
+            .row
+                .col-lg-12
+                    .row.row-post-masonry
+                        .col-md-4.post-item
+                            +PostMasonry("assets/images/blog/1.jpg", "Bluetooth Speaker")
+                        .col-md-4.post-item
+                            +PostMasonry("assets/images/blog/2.jpg", "Minimalist Chandelier")
+                        .col-md-4.post-item
+                            +PostMasonry("assets/images/blog/3.jpg", "Standard Shape")
+                        .col-md-4.post-item
+                            +PostMasonry("assets/images/blog/4.jpg", "Street Fashion")
+                        .col-md-4.post-item
+                            +PostMasonry("assets/images/blog/6.jpg", "Bluetooth Speaker")
+                        .col-md-4.post-item
+                            +PostMasonry("assets/images/blog/5.jpg", "Minimalist Chandelier")
+    // Blog end

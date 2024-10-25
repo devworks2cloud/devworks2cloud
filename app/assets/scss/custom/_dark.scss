@@ -1,0 +1,68 @@
+//
+// Dark Background
+//
+
+.parallax:not(.bg-light) {
+    color: #ffffff;
+
+    a:not(.btn):not(.accordion-link):not(.alert-link) {
+        color: #fff;
+
+        &:hover {
+            color: rgba(#fff, .6);
+        }
+    }
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6,
+    .blockquote-footer,
+    .counter .counter-icon {
+        color: #ffffff;
+    }
+
+
+    .breadcrumb-item.active,
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(#fff, .6);
+    }
+
+
+    .owl-carousel .owl-dots .owl-dot:hover,
+    .owl-carousel .owl-dots .owl-dot.active {
+        border-color: #fff;
+    }
+    .owl-carousel .owl-dots .owl-dot > span {
+        background: #fff;
+    }
+
+
+    .form-control {
+        background: transparent;
+        border-color: rgba(#fff, .6);
+        color: #fff;
+    }
+
+    .form-control::-webkit-input-placeholder {
+        color: #fff;
+    }
+
+    .form-control::-ms-input-placeholder {
+        color: #fff;
+    }
+
+    .form-control:-ms-input-placeholder {
+        color: #fff;
+    }
+
+    .form-control::-moz-placeholder {
+        color: #fff;
+    }
+
+    .form-control:-moz-placeholder {
+        color: #fff;
+    }
+}

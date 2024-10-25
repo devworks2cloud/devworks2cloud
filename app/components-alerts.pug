@@ -1,0 +1,75 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Alerts", "Elements")
+
+    = "\n"
+
+    // Alerts
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    +Alert("alert-brand")
+                    +Alert("alert-primary")
+                    +Alert("alert-secondary")
+                    +Alert("alert-success")
+                    +Alert("alert-info")
+                    +Alert("alert-warning")
+                    +Alert("alert-danger")
+                    +Alert("alert-light")
+                    +Alert("alert-dark")
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;alert alert-brand&quot;&gt;
+                                    |    &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;your attention&lt;/a&gt;, but it's not super important.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-primary&quot;&gt;
+                                    |    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;read this&lt;/a&gt; important alert message.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-secondary&quot;&gt;
+                                    |    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;read this&lt;/a&gt; important alert message.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-success&quot;&gt;
+                                    |    &lt;strong&gt;Well done!&lt;/strong&gt; You successfully &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;read this&lt;/a&gt; important alert message.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-info&quot;&gt;
+                                    |    &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;your attention&lt;/a&gt;, but it's not super important.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-warning&quot;&gt;
+                                    |    &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;you're not&lt;/a&gt; looking too good.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-danger&quot;&gt;
+                                    |    &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;submitting&lt;/a&gt; again.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-light&quot;&gt;
+                                    |    &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;submitting&lt;/a&gt; again.
+                                    |&lt;/div&gt;
+                                    |&lt;div class=&quot;alert alert-dark&quot;&gt;
+                                    |    &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try &lt;a class=&quot;alert-link&quot; href=&quot;#&quot;&gt;submitting&lt;/a&gt; again.
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |+Alert("alert-brand")
+                                    |+Alert("alert-primary")
+                                    |+Alert("alert-secondary")
+                                    |+Alert("alert-success")
+                                    |+Alert("alert-info")
+                                    |+Alert("alert-warning")
+                                    |+Alert("alert-danger")
+                                    |+Alert("alert-light")
+                                    |+Alert("alert-dark")
+    // Alerts end

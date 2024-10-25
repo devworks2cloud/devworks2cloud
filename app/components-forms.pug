@@ -1,0 +1,275 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Inputs", "Elements")
+
+    = "\n"
+
+    // Inputs
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    h5.m-b-30 Form Inputs
+
+                    form
+                        .form-group
+                            input.form-control(type="email" placeholder="Email")
+                        .form-group
+                            textarea.form-control(rows="5" placeholder="Example textarea")
+                        .form-group
+                            select.form-control
+                                option(selected="selected") Select
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+                        .form-group
+                            select.form-control(multiple="")
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;form&gt;
+                                    |    &lt;div class=&quot;form-group&quot;&gt;
+                                    |        &lt;input class=&quot;form-control&quot; type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;form-group&quot;&gt;
+                                    |        &lt;textarea class=&quot;form-control&quot; rows=&quot;5&quot; placeholder=&quot;Example textarea&quot;&gt;&lt;/textarea&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;form-group&quot;&gt;
+                                    |        &lt;select class=&quot;form-control&quot;&gt;
+                                    |            &lt;option selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
+                                    |            &lt;option&gt;1&lt;/option&gt;
+                                    |            &lt;option&gt;2&lt;/option&gt;
+                                    |            &lt;option&gt;3&lt;/option&gt;
+                                    |            &lt;option&gt;4&lt;/option&gt;
+                                    |            &lt;option&gt;5&lt;/option&gt;
+                                    |        &lt;/select&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;form-group&quot;&gt;
+                                    |        &lt;select class=&quot;form-control&quot; multiple=&quot;&quot;&gt;
+                                    |            &lt;option&gt;1&lt;/option&gt;
+                                    |            &lt;option&gt;2&lt;/option&gt;
+                                    |            &lt;option&gt;3&lt;/option&gt;
+                                    |            &lt;option&gt;4&lt;/option&gt;
+                                    |            &lt;option&gt;5&lt;/option&gt;
+                                    |        &lt;/select&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/form&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |form
+                                    |    .form-group
+                                    |        input.form-control(type="email" placeholder="Email")
+                                    |    .form-group
+                                    |        textarea.form-control(rows="5" placeholder="Example textarea")
+                                    |    .form-group
+                                    |        select.form-control
+                                    |            option(selected="selected") Select
+                                    |            option 1
+                                    |            option 2
+                                    |            option 3
+                                    |            option 4
+                                    |            option 5
+                                    |    .form-group
+                                    |        select.form-control(multiple="")
+                                    |            option 1
+                                    |            option 2
+                                    |            option 3
+                                    |            option 4
+                                    |            option 5
+    // Inputs
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    h5.m-b-30 Form Sizes
+
+            .row
+                .col-md-6
+                    .form-group
+                        input.form-control.form-control-lg(type="text" placeholder="Large input")
+                    .form-group
+                        input.form-control(type="text" placeholder="Default input")
+                    .form-group
+                        input.form-control.form-control-sm(type="text" placeholder="Small input")
+                .col-md-6
+                    .form-group
+                        select.form-control.form-control-lg
+                            option Large select
+                    .form-group
+                        select.form-control
+                            option Default select
+                    .form-group
+                        select.form-control.form-control-sm
+                            option Small select
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-2-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-2-2"): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;form-group&quot;&gt;
+                                    |    &lt;input class=&quot;form-control form-control-lg&quot; type=&quot;text&quot; placeholder=&quot;Large input&quot;&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;form-group&quot;&gt;
+                                    |    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Default input&quot;&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;form-group&quot;&gt;
+                                    |    &lt;input class=&quot;form-control form-control-sm&quot; type=&quot;text&quot; placeholder=&quot;Small input&quot;&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;form-group&quot;&gt;
+                                    |    &lt;select class=&quot;form-control form-control-lg&quot;&gt;
+                                    |        &lt;option&gt;Large select&lt;/option&gt;
+                                    |    &lt;/select&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;form-group&quot;&gt;
+                                    |    &lt;select class=&quot;form-control&quot;&gt;
+                                    |        &lt;option&gt;Default select&lt;/option&gt;
+                                    |    &lt;/select&gt;
+                                    |&lt;/div&gt;
+                                    |
+                                    |&lt;div class=&quot;form-group&quot;&gt;
+                                    |    &lt;select class=&quot;form-control form-control-sm&quot;&gt;
+                                    |        &lt;option&gt;Small select&lt;/option&gt;
+                                    |    &lt;/select&gt;
+                                    |&lt;/div&gt;
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.form-group
+                                    |    input.form-control.form-control-lg(type="text" placeholder="Large input")
+                                    |.form-group
+                                    |    input.form-control(type="text" placeholder="Default input")
+                                    |.form-group
+                                    |    input.form-control.form-control-sm(type="text" placeholder="Small input")
+                                    |.form-group
+                                    |    select.form-control.form-control-lg
+                                    |        option Large select
+                                    |.form-group
+                                    |    select.form-control
+                                    |        option Default select
+                                    |.form-group
+                                    |    select.form-control.form-control-sm
+                                    |        option Small select
+    // Inputs
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-12
+                    h5.m-b-30 Form Grid
+
+                    form
+                        .row
+                            .col
+                                .form-group
+                                    input.form-control(type="text" placeholder="First name")
+                            .col
+                                .form-group
+                                    input.form-control(type="text" placeholder="Last name")
+                    form
+                        .row
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" placeholder="First name")
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" placeholder="Last name")
+                            .col-md-4
+                                .form-group
+                                    input.form-control(type="text" placeholder="Subject")
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-3-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-3-2"): h6 PUG
+                    .tab-content
+                        #tab-3-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;form&gt;
+                                    |    &lt;div class=&quot;row&quot;&gt;
+                                    |        &lt;div class=&quot;col&quot;&gt;
+                                    |            &lt;div class=&quot;form-group&quot;&gt;
+                                    |                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;First name&quot;&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;col&quot;&gt;
+                                    |            &lt;div class=&quot;form-group&quot;&gt;
+                                    |                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Last name&quot;&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/form&gt;
+                                    |
+                                    |&lt;form&gt;
+                                    |    &lt;div class=&quot;row&quot;&gt;
+                                    |        &lt;div class=&quot;col-md-4&quot;&gt;
+                                    |            &lt;div class=&quot;form-group&quot;&gt;
+                                    |                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;First name&quot;&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;col-md-4&quot;&gt;
+                                    |            &lt;div class=&quot;form-group&quot;&gt;
+                                    |                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Last name&quot;&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;col-md-4&quot;&gt;
+                                    |            &lt;div class=&quot;form-group&quot;&gt;
+                                    |                &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Subject&quot;&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/form&gt;
+                        #tab-3-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |form
+                                    |    .row
+                                    |        .col
+                                    |            .form-group
+                                    |                input.form-control(type="text" placeholder="First name")
+                                    |        .col
+                                    |            .form-group
+                                    |                input.form-control(type="text" placeholder="Last name")
+                                    |form
+                                    |    .row
+                                    |        .col-md-4
+                                    |            .form-group
+                                    |                input.form-control(type="text" placeholder="First name")
+                                    |        .col-md-4
+                                    |            .form-group
+                                    |                input.form-control(type="text" placeholder="Last name")
+                                    |        .col-md-4
+                                    |            .form-group
+                                    |                input.form-control(type="text" placeholder="Subject")
+    // Inputs end

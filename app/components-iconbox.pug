@@ -1,0 +1,293 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Icon with Text", "Elements")
+
+    = "\n"
+
+    // Iconbox
+    section.module
+        .container
+
+            .row
+                .col-lg-3.col-md-6
+                    +IconBox("ti-layout", "Visual Composer", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-cup", "Revolution Slider", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-harddrives", "User Experience", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                .col-lg-3.col-md-6
+                    +IconBox("ti-desktop", "Fully Responsive", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle="tab" href="#tab-1-1"): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle="tab" href="#tab-1-2"): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-lg-3 col-md-6&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box text-center&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-layout&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Visual Composer&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-lg-3 col-md-6&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box text-center&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-cup&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Revolution Slider&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-lg-3 col-md-6&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box text-center&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-harddrives&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;User Experience&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-lg-3 col-md-6&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box text-center&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-desktop&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Fully Responsive&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row
+                                    |    .col-lg-3.col-md-6
+                                    |        +IconBox("ti-layout", "Visual Composer", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                                    |    .col-lg-3.col-md-6
+                                    |        +IconBox("ti-cup", "Revolution Slider", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                                    |    .col-lg-3.col-md-6
+                                    |        +IconBox("ti-harddrives", "User Experience", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+                                    |    .col-lg-3.col-md-6
+                                    |        +IconBox("ti-desktop", "Fully Responsive", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+    // Iconbox end
+
+    = "\n"
+
+    // Iconbox
+    section.module.divider-top
+        .container
+
+            .row.align-items-center
+                .col-lg-4
+                    +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "text-right", true)
+                    +IconBox("ti-image", "Revolution Slider", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "text-right", true)
+                .col-lg-4
+                    p.text-center: img(src="assets/images/main/iphone.png" alt="")
+                .col-lg-4
+                    +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+                    +IconBox("ti-archive", "User Experience", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-2-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-2-2'): h6 PUG
+                    .tab-content
+                        #tab-2-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row align-items-center&quot;&gt;
+                                    |    &lt;div class=&quot;col-lg-4&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box text-right&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-layout&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Visual Composer&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;See how your users experience your website in realtime or view trends to see any changes in performance over time.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;icon-box text-right&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-image&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Revolution Slider&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;See how your users experience your website in realtime or view trends to see any changes in performance over time.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-lg-4&quot;&gt;
+                                    |        &lt;p class=&quot;text-center&quot;&gt;
+                                    |            &lt;img src=&quot;assets/images/main/iphone.png&quot; alt=&quot;&quot;&gt;
+                                    |        &lt;/p&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-lg-4&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-layout&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Visual Composer&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;See how your users experience your website in realtime or view trends to see any changes in performance over time.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;icon-box&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-archive&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;User Experience&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;See how your users experience your website in realtime or view trends to see any changes in performance over time.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-link&quot;&gt;
+                                    |                &lt;a href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-2-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row.align-items-center
+                                    |    .col-lg-4
+                                    |        +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "text-right", true)
+                                    |        +IconBox("ti-image", "Revolution Slider", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "text-right", true)
+                                    |    .col-lg-4
+                                    |        p.text-center: img(src="assets/images/main/iphone.png" alt="")
+                                    |    .col-lg-4
+                                    |        +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+                                    |        +IconBox("ti-archive", "User Experience", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "", true)
+    // Iconbox end
+
+    = "\n"
+
+    // Iconbox
+    section.module.divider-top
+        .container
+
+            .row.align-items-center
+                .col-lg-6
+                    img(src="assets/images/main/ipad.png" alt="")
+                .col-lg-5.offset-lg-1
+                    +iconBoxLeft("ti-layout", "Visual Composer", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+                    +iconBoxLeft("ti-cup", "Revolution Slider", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+                    +iconBoxLeft("ti-harddrives", "User Experience", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+
+            .row.m-t-40
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-3-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-3-2'): h6 PUG
+                    .tab-content
+                        #tab-3-1.tab-pane.show.active
+                            pre
+                                code.language-markup.blurred
+                                    |&lt;div class=&quot;row align-items-center&quot;&gt;
+                                    |    &lt;div class=&quot;col-lg-6&quot;&gt;
+                                    |        &lt;p&gt;&lt;img src=&quot;assets/images/main/ipad.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-lg-5 offset-lg-1&quot;&gt;
+                                    |        &lt;div class=&quot;icon-box icon-box-left&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-layout&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Visual Composer&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;icon-box icon-box-left&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-cup&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;Revolution Slider&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |        &lt;div class=&quot;icon-box icon-box-left&quot;&gt;
+                                    |            &lt;div class=&quot;icon-box-icon&quot;&gt;
+                                    |                &lt;span class=&quot;ti-harddrives&quot;&gt;&lt;/span&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-title&quot;&gt;
+                                    |                &lt;h6&gt;User Experience&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;icon-box-content&quot;&gt;
+                                    |                &lt;p&gt;Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.&lt;/p&gt;
+                                    |            &lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-3-2.tab-pane
+                            pre
+                                code.language-pug.blurred
+                                    |.row.align-items-center
+                                    |    .col-lg-6
+                                    |        img(src="assets/images/main/ipad.png" alt="")
+                                    |    .col-lg-5.offset-lg-1
+                                    |        +iconBoxLeft("ti-layout", "Visual Composer", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+                                    |        +iconBoxLeft("ti-cup", "Revolution Slider", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+                                    |        +iconBoxLeft("ti-harddrives", "User Experience", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
+    // Iconbox end

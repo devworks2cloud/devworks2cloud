@@ -1,0 +1,106 @@
+//
+// Modules
+//
+
+.header + .wrapper .module:first-child {
+    padding-top: $module-padding-top + $header-height;
+}
+
+.header + .wrapper section.maps-container:first-child {
+    padding-top: $header-height;
+}
+
+.module,
+.module-cover {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: $body-bg;
+    background-size: cover;
+    padding: $module-padding-top 0 $module-padding-bottom;
+}
+
+.parallax {
+    background-color: transparent;
+
+    .container,
+    .container-fluid {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.bg-gray {
+    background-color: $module-gray-background;
+}
+
+.overlay-background {
+    background: $module-overlay-color;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    &.overlay-gradient {
+        background: $module-gradient-left;
+        background: -webkit-linear-gradient(to left, $module-gradient-right, $module-gradient-left);
+        background: linear-gradient(to left, $module-gradient-right, $module-gradient-left);
+    }
+}
+
+.divider-top {
+    border-top: 1px solid $border-color;
+}
+
+.divider-bottom {
+    border-bottom: 1px solid $border-color;
+}
+
+.module-page-title {
+    padding-top: $module-page-title-padding-top + $header-height;
+    padding-bottom: $module-page-title-padding-bottom;
+
+    .page-title-desc > *:last-child {
+        margin-bottom: 0;
+    }
+
+    .page-title-heading {
+        font-weight: 500;
+        font-size: rem(18px);
+        margin-bottom: 2px;
+    }
+
+    .breadcrumb {
+        justify-content: flex-end;
+        font-size: rem(13px);
+        padding: rem(10px) 0;
+        margin-bottom: 0;
+
+        .breadcrumb-item > a {
+            color: $body-color;
+
+            &:hover {
+                color: theme-color("brand");
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+
+    .module-page-title {
+        padding-top: $module-page-title-padding-top;
+        padding-bottom: $module-page-title-padding-bottom;
+    }
+
+}
+
+@include media-breakpoint-down(sm) {
+
+    .module-page-title .breadcrumb,
+    .module-page-title .page-title-desc {
+        text-align: center;
+        justify-content: center;
+    }
+
+}
