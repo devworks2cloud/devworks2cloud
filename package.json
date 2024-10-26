@@ -4,7 +4,7 @@
   "description": "Boomerang - is clean, modern and responsive Bootstrap 4 template developed for corporate or any other business company sites to showcase their company, services, portfolio, team, blogs in most professional looking manner. The Boomerang template supports parallax, Vimeo, Youtube and local video backgrounds. Template also includes blog pages, portfolio pages and shop pages.",
   "main": "index.js",
   "engines": {
-    "node": "^20.15"
+    "node": ">=20.18.0"
   },
   "scripts": {
     "nextBookingTime": "node nextBookingTime.js",
