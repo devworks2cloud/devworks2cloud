@@ -1,16 +1,19 @@
 // // const axios = require('axios');
 // // import axios from 'axios';
+import fetch from 'node-fetch';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function obtenerProximaCita() {
     try {
         // Realizar la solicitud a la API usando fetch en lugar de axios
         const response = await fetch('https://api.vyte.in/v2/slots/next?duration=15&emails=praxis@tierarzt-ffm.de', {
             headers: {
-                'Authorization': 'p98wfm4baupc6ns5fx8ezazv6209vuu4elvghhuflyxlv0tuff' // Clave de autorización
+                'Authorization': process.env.VYTE_API_KEY // Clave de autorización
             }
         });
-        todayMilliseconds = Date.now(); 
-        today = new Date(todayMilliseconds);
+        let todayMilliseconds = Date.now(); 
+        let today = new Date(todayMilliseconds);
         console.log(today);
         // Obtener el año, el mes y el día
         const year = today.getFullYear();
