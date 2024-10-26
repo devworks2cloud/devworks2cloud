@@ -27,6 +27,15 @@ app.use(express.urlencoded({ extended: true })); // Si también quieres manejar 
 // Especifica el directorio desde el cual se servirán los archivos estáticos
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.get('/api/maps', async (req, res) => {
+    try {
+        const response = await axios.get(`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&callback=initMap&v=quarterly&libraries=maps,marker&loading=async`);
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).send('Error fetching data');
+    }
+});
+
 // Ruta para manejar otras solicitudes
 app.get('*', (req, res) => {
     // Obtener la ruta del archivo solicitado por el cliente

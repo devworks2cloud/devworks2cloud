@@ -123,5 +123,16 @@ html(lang="en")
         script(src="./assets/js/custom/main.js")
 
         //script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1UrYPeZyqIN7xXMU83m0RI4X_ag-eS34&libraries=maps&v=beta" async defer)
-        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1UrYPeZyqIN7xXMU83m0RI4X_ag-eS34&callback=initMap&v=quarterly&libraries=maps,marker&loading=async" defer)
+        script.
+        fetch('/api/secret')
+            .then(response => response.json())
+            .then(data => {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${data.key}&callback=initMap&v=quarterly&libraries=maps,marker&loading=async`;
+            script.defer = true;
+            document.head.appendChild(script);
+            })
+            .catch(error => {
+            console.error('Error fetching the API key:', error);
+            });
         script(src="./assets/js/custom/plugins.min.js")
